@@ -4,10 +4,9 @@
 .root{
 
   display: flex;
-
   padding: $apx-33 $apx-42 $apx-53 $apx-42;
-
   background-color: #444402;
+  z-index: 4;
 
   .logoWrap{
 
@@ -109,7 +108,7 @@
       &:first-child{
         
         text-transform: uppercase;
-        
+
       }
 
     }
