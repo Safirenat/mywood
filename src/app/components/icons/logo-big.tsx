@@ -7,7 +7,7 @@ const LogoBigIcon: FC< LogoBigIconProps > = () => {
   return (
 
 <svg width="572" height="1085" viewBox="0 0 572 1085" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-<rect y="1085" width="1085" height="572" transform="rotate(-90 0 1085)" fill="url(#pattern0_1377_3327)" fill-opacity="0.1"/>
+<rect y="1085" width="1085" height="572" transform="rotate(-90 0 1085)" fill="url(#pattern0_1377_3327)" fillOpacity="0.1"/>
 <defs>
 <pattern id="pattern0_1377_3327" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlinkHref="#image0_1377_3327" transform="matrix(0.000576781 0 0 0.00110312 0.0245478 0.0523496)"/>

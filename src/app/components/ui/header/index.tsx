@@ -11,7 +11,6 @@ const Header: FC = () => {
 
   return (
 
-
     <div className = { s.root }>
 
       <div className = { s.left }>
