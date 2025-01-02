@@ -1,0 +1,138 @@
+@import '../../../styles/adaptivepx.scss';
+@import '../../../styles/mixins.scss';
+
+.root{
+
+  display: flex;
+  align-items: center;
+  column-gap: $apx-134;
+
+  background-color: #444402;
+  color: #FAFAF2;
+  padding: $apx-6 $apx-30 $apx-14 $apx-43;
+
+  .left{
+
+    display: flex;
+    align-items: center;
+    column-gap: $apx-54;
+
+    .logo{
+
+      svg{
+
+        width: $apx-80;
+        height: $apx-80;
+
+      }
+      
+    }
+
+    .navWrap{
+
+      display: flex;
+      align-items: center;
+      column-gap: $apx-54;
+
+      .phoneWrap{
+
+        display: flex;
+        align-items: center;
+        column-gap: $apx-10;
+
+        font-size: $apx-16;
+        font-weight: 400;
+        line-height: 100%;
+        white-space: nowrap;
+
+        .phone, svg{
+
+          cursor: pointer;
+          
+          &:hover{
+            
+            color:red;
+            
+          }
+
+        }
+
+        svg{
+
+          width: $apx-24;
+          height: $apx-24;
+
+        }
+
+      }
+  
+      .nav{
+  
+        display: flex;
+        align-items: center;
+        column-gap: $apx-54;
+
+        font-size: $apx-16;
+        font-weight: 700;
+        line-height: 100%;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        div{
+
+          cursor: pointer;
+
+          &:hover{
+
+            color:red;
+
+          }
+
+        }
+    
+      }
+  
+    }
+
+  }
+
+  .right{
+
+    display: flex;
+    align-items: center;
+    column-gap: $apx-42;
+
+    div{
+
+      display: flex;
+      
+    }
+
+    input{
+
+      width: $apx-323;
+      height: $apx-39;
+
+    }
+
+    svg{
+
+      &:first-child{
+
+        width: $apx-20;
+        height: $apx-18;
+
+      }
+
+      &:last-child{
+
+        width: $apx-22;
+        height: $apx-21;
+
+      }
+
+    }
+
+  }
+
+}

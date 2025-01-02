@@ -3,10 +3,10 @@
 .mainContainer {
 
   display: flex;
-  // justify-content: space-between;
   flex-direction: column;
-  padding: 0 $apx-340 0 $apx-290;
-  width: 100%;
+  padding: 0 $apx-40;
+  margin: 0 auto;
+  max-width: $apx-1440;
 
   .content { flex-grow: 1; }
 
