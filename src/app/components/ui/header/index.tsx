@@ -26,7 +26,7 @@ const Header: FC = () => {
 
             <div className = { s.phone }>
             
-              +7919646-50-74
+              +7 919 646-50-74
 
             </div>
 

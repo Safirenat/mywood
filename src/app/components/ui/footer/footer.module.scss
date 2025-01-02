@@ -1,0 +1,128 @@
+@import '../../../styles/adaptivepx.scss';
+@import '../../../styles/mixins.scss';
+
+.root{
+
+  display: flex;
+
+  padding: $apx-33 $apx-42 $apx-53 $apx-42;
+
+  background-color: #444402;
+
+  .logoWrap{
+
+    display: flex;
+    flex-direction: column;
+    margin-right: $apx-170;
+
+    .logo{
+
+      svg{
+
+        width: $apx-80;
+        height: $apx-80;
+
+      }
+      
+    }
+
+    span{
+
+      font-size: $apx-12;
+      font-weight: 400;
+      line-height: 100%;
+      white-space: nowrap;
+      color: #FAFAF2;
+
+    }
+
+  }
+
+  .menu{
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $apx-10;
+    margin-right: $apx-114;
+
+    span{
+      
+      font-size: $apx-16;
+      font-weight: 400;
+      line-height: 100%;
+      color: #FAFAF2;
+      white-space: nowrap;
+      text-transform: uppercase;
+
+      &:first-child{
+
+        font-size: $apx-20;
+
+      }
+
+
+    }
+
+  }
+
+  .info{
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $apx-10;
+    margin-right: $apx-49;
+
+    span{
+      
+      font-size: $apx-16;
+      font-weight: 400;
+      line-height: 100%;
+      color: #FAFAF2;
+      white-space: nowrap;
+      text-transform: uppercase;
+
+      &:first-child{
+
+        font-size: $apx-20;
+
+      }
+
+    }
+
+
+  }
+
+  .contacts{
+
+    display: flex;
+    flex-direction: column;
+    row-gap: $apx-10;
+
+    span{
+      
+      font-size: $apx-20;
+      font-weight: 400;
+      line-height: 100%;
+      color: #FAFAF2;
+      white-space: nowrap;
+      text-transform: uppercase;
+
+    }
+
+    .icons{
+
+      display: flex;
+      column-gap: $apx-20;
+
+      svg{
+        
+        width: $apx-30;
+        height: $apx-30;
+
+      }
+
+    }
+
+  }
+
+}
