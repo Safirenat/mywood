@@ -11,61 +11,59 @@ const Header: FC = () => {
 
   return (
 
-    <>
 
-      <div className = { s.root }>
+    <div className = { s.root }>
 
-        <div className = { s.left }>
+      <div className = { s.left }>
 
-          <div className = { s.logo }><Logo/></div>
+        <div className = { s.logo }><Logo/></div>
 
-          <div className = { s.navWrap }>
+        <div className = { s.navWrap }>
 
-            <div className = { s.phoneWrap }>
+          <div className = { s.phoneWrap }>
 
-              <PhoneIcon/>
+            <PhoneIcon/>
 
-              <div className = { s.phone }>
-              
-                +7919646-50-74
-
-              </div>
+            <div className = { s.phone }>
+            
+              +7919646-50-74
 
             </div>
 
-            <div className = { s.nav }>
+          </div>
 
-              <div>Каталог</div>
-              <div>Наши работы</div>
-              <div>О компании</div>
+          <div className = { s.nav }>
 
-            </div>
+            <div>Каталог</div>
+            <div>Наши работы</div>
+            <div>О компании</div>
 
           </div>
 
         </div>
-        
-        <div className = { s.right }>
 
-          <input placeholder = "Найти на сайте"/>
+      </div>
+      
+      <div className = { s.right }>
 
-          <div>
+        <input placeholder = "Найти на сайте"/>
 
-            <LikeIcon/>
+        <div>
 
-          </div>
+          <LikeIcon/>
 
-          <div>
+        </div>
 
-            <BasketIcon/>
+        <div>
 
-          </div>
-        
+          <BasketIcon/>
+
         </div>
       
       </div>
+    
+    </div>
 
-    </>
 
   );
 
