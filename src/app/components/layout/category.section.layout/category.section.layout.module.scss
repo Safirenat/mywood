@@ -1,0 +1,13 @@
+@import '../../../styles/adaptivepx.scss';
+
+
+
+.items{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $apx-20;
+  padding-left: $apx-40;
+  padding-right: $apx-40;
+  
+}

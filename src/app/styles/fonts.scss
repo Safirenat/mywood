@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'CormorantUnicase-Bold';
+  // src: url('./fonts/Circe-Light.eot');
+  src: local('CormorantUnicase Bold'), local('CormorantUnicase-Bold'),
+      // url('./fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/CormorantUnicase-Bold.woff2') format('woff2'),
+      url('./fonts/CormorantUnicase-Bold.woff') format('woff'),
+      url('./fonts/CormorantUnicase-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CormorantUnicase-Regular';
+  // src: url('./fonts/Circe-Light.eot');
+  src: local('CormorantUnicase Regular'), local('CormorantUnicase-Regular'),
+      // url('./fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/CormorantUnicase-Regular.woff2') format('woff2'),
+      url('./fonts/CormorantUnicase-Regular.woff') format('woff'),
+      url('./fonts/CormorantUnicase-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CormorantUnicase-SemiBold';
+  // src: url('./fonts/Circe-Light.eot');
+  src: local('CormorantUnicase SemiBold'), local('CormorantUnicase-SemiBold'),
+      // url('./fonts/Circe-Light.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/CormorantUnicase-SemiBold.woff2') format('woff2'),
+      url('./fonts/CormorantUnicase-SemiBold.woff') format('woff'),
+      url('./fonts/CormorantUnicase-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}

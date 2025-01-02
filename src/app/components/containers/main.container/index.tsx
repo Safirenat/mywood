@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-// import Footer from "../../ui/footer";
+import Footer from "../../ui/footer";
 import s from "./main.container.module.scss";
 import Header from "../../ui/header";
 
@@ -17,7 +17,7 @@ const MainContainer = ({ children }: Readonly< { children: ReactNode } > ) => {
       
       </div>
 
-      {/* <Footer auth /> */}Footer
+      <Footer />
 
     </div>
 
