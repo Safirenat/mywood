@@ -12,6 +12,9 @@ export default function Home() {
 
     <div>
       Block
+      Block
+      Block
+      Block
     </div>
 
     </MainContainer>
