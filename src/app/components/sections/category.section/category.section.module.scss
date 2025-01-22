@@ -3,8 +3,15 @@
 .root{
 
   position: relative;
-
+  cursor: pointer;
+  
   .img{
+
+    @media screen and ( max-width: 768px ) {
+
+      height: $apx-l-320;
+
+    }
 
     img{
 
@@ -12,6 +19,22 @@
       max-width: $apx-440;
       height: $apx-320;
       border-radius: $apx-10;
+
+      @media screen and ( max-width: 768px ) {
+
+        height: $apx-l-320;
+        max-width: $apx-l-536;
+        border-radius: $apx-l-10;
+
+      }
+
+      @media screen and ( max-width: 390px ) {
+
+        border-radius: $apx-m-10;
+        max-height: $apx-m-180;
+        max-width: $apx-m-350;
+
+      }
 
     }
     
@@ -23,6 +46,20 @@
     left: $apx-30;
     bottom: $apx-30;
 
+    @media screen and ( max-width: 768px ) {
+
+      left: $apx-l-30;
+      bottom: $apx-l-30;
+
+    }
+
+    @media screen and ( max-width: 390px ) {
+
+      left: $apx-m-30;
+      bottom: $apx-m-30;
+
+    }
+
     &:last-child{
 
       color: #FAFAF2;
@@ -31,10 +68,32 @@
 
     .title{
 
+      font-family: Cormorant Unicase;
       font-size: $apx-20;
       font-weight: 400;
       line-height: 100%;
       color: #FFFFFF;
+      margin-bottom: $apx-16;
+      max-width: $apx-146;
+
+
+      @media screen and ( max-width: 768px ) {
+
+        max-width: $apx-l-146;
+
+        font-size: $apx-l-30;
+        margin-bottom: $apx-l-16;
+
+      } 
+
+      @media screen and ( max-width: 390px ) {
+
+        max-width: $apx-m-146;
+
+        font-size: $apx-m-20;
+        margin-bottom: $apx-m-16;
+
+      }
 
     }
 

@@ -12,19 +12,26 @@
 
 }
 
-@media screen and ( max-width: 1024px ) {
+@media screen and ( max-width: 768px ) {
 
   .mainContainer {
 
+    max-width: $apx-m-768;
+
     padding: 0;
+    padding: 0 $apx-m-16;
+    
 
   }
 
 }
 
-@media screen and ( max-width: 640px ) {
+@media screen and ( max-width: 768px ) {
 
   .mainContainer {
+
+    padding: 0 $apx-m-16;
+    max-width: 100%;
 
     // .content {
 

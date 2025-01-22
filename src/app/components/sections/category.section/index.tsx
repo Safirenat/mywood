@@ -27,7 +27,7 @@ const CategorySection: FC<CategorySectionProps> = ({ title, image, link }) => {
       <div className = { s.text }>
 
         <div className = { s.title }>{ title} </div>
-        <a href = { link } className = "button">подробнее →</a>
+        <a href = { link } className = { s.link }>подробнее →</a>
 
       </div>
 

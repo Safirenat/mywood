@@ -3,33 +3,41 @@
 import { FC } from "react";
 import s from "./category.section.layout.module.scss";
 import CategorySection from "../../sections/category.section";
+import Button from "../../button";
 
 const items = [
 
   {
 
-    title: "Двери для бани",
+    title: "Деревянные двери",
+    image: "/img/combo.jpg",
+    link: "#"
+
+  },
+  {
+
+    title: "Комбинированные двери",
+    image: "/img/combo.jpg",
+    link: "#"
+
+  },
+  {
+
+    title: "Стеклянные двери",
+    image: "/img/steklo.jpg",
+    link: "#"
+
+  },
+  {
+
+    title: "Абажуры для бани",
     image: "/img/bg-home-section.png",
     link: "#"
 
   },
   {
 
-    title: "Отделка бань и саун",
-    image: "/img/bg-home-section.png",
-    link: "#"
-
-  },
-  {
-
-    title: "Окна для бани",
-    image: "/img/bg-home-section.png",
-    link: "#"
-
-  },
-  {
-
-    title: "Мебель для бани и дачи",
+    title: "Форточки для бани и сауны",
     image: "/img/bg-home-section.png",
     link: "#"
 
@@ -57,7 +65,19 @@ const CategorySectionLayout = () => {
 
     <div className = { s.root }>
 
-      <div>Категории товаров</div>
+      <div className = { s.header }>
+
+        <div className = { s.title }>Категории <br/> 
+
+          <span className = { s.subTitle }>товаров
+          </span>
+
+        </div>
+        
+        <Button label = "КАТАЛОГ" variant = "outline" />
+
+      </div>
+
 
       <div className = { s.items }>
 

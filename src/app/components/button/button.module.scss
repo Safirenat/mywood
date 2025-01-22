@@ -1,0 +1,43 @@
+@import '../../styles/adaptivepx.scss';
+
+.button {
+  
+  // padding: $apx-20 $apx-117;
+  font-family: Cormorant Unicase;
+  
+  cursor: pointer;
+  border-radius: $apx-5;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 10;
+
+  &.outline {
+
+    border: $apx-2 solid #CD9872;
+    background-color: transparent;
+    color: #222222;
+
+    &:hover {
+
+      background-color: #CD9872;
+      color: white;
+
+    }
+
+  }
+
+  &.filled {
+
+    border: $apx-2 solid #CD9872;
+    background-color: #CD9872;
+    color: #FAFAF2;
+
+    &:hover {
+
+      background-color: transparent;
+      color: #222222;
+
+    }
+
+  }
+
+} 

@@ -71,18 +71,19 @@
     }
 
   }
-    
    
   .img{
+    
+    pointer-events: none;
 
     svg{
 
       position: absolute;
-      top: -$apx-20;
-      right: -$apx-270;
+      top: $apx-20;
+      right: -$apx-95;
   
-      width: $apx-1085;
-      height: $apx-1000;
+      width: $apx-700;
+      height: $apx-950;
   
       z-index: 3;
   
