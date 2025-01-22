@@ -6,6 +6,7 @@ import Logo from "../logo";
 import PhoneIcon from "../../icons/phone";
 import LikeIcon from "../../icons/like";
 import BasketIcon from "../../icons/basket";
+import HamburgerIcon from "../../icons/hamburger";
 
 const Header: FC = () => {
 
@@ -41,21 +42,37 @@ const Header: FC = () => {
 
         </div>
 
+       
+
       </div>
       
       <div className = { s.right }>
 
-        <input placeholder = "Найти на сайте"/>
+        <div className = { s.hamburger }>
 
-        <div>
-
-          <LikeIcon/>
+          <HamburgerIcon />
 
         </div>
 
-        <div>
+        <div className = { s.searchWrap }>
 
-          <BasketIcon/>
+          <input placeholder = "Найти на сайте"/>
+
+          <div className = { s.iconsWrap }>
+
+            <div className = { s.likeWrap }>
+
+              <LikeIcon/>
+
+            </div>
+
+            <div className = { s.basketWrap }>
+
+              <BasketIcon/>
+
+            </div>
+
+          </div>
 
         </div>
       

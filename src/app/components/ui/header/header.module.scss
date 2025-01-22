@@ -11,6 +11,7 @@
   color: #FAFAF2;
   padding: $apx-6 $apx-30 $apx-14 $apx-43;
 
+
   .left{
 
     display: flex;
@@ -24,6 +25,13 @@
         width: $apx-80;
         height: $apx-80;
 
+        @media screen and ( max-width: 768px ) {
+
+          width: $apx-l-120;
+          height: $apx-l-150;
+
+        }
+
       }
       
     }
@@ -33,6 +41,12 @@
       display: flex;
       align-items: center;
       column-gap: $apx-54;
+
+      @media screen and ( max-width: 768px ) {
+
+        column-gap: $apx-l-54;
+
+      }
 
       .phoneWrap{
 
@@ -44,6 +58,20 @@
         font-weight: 400;
         line-height: 100%;
         white-space: nowrap;
+
+        @media screen and ( max-width: 768px ) {
+
+          font-size: $apx-l-16;
+          column-gap: $apx-l-10;
+
+        }
+
+        @media screen and ( max-width: 390px ) {
+
+          font-size: $apx-m-14;
+          column-gap: $apx-m-10;
+
+        }
 
         .phone, svg{
 
@@ -62,6 +90,13 @@
           width: $apx-24;
           height: $apx-24;
 
+          @media screen and ( max-width: 768px ) {
+
+            width: $apx-l-24;
+            height: $apx-l-24;
+
+          }
+
         }
 
       }
@@ -77,6 +112,12 @@
         line-height: 100%;
         white-space: nowrap;
         text-transform: uppercase;
+
+        @media screen and ( max-width: 768px ) {
+
+          display: none;
+
+        }
 
         div{
 
@@ -102,6 +143,19 @@
     align-items: center;
     column-gap: $apx-42;
 
+    .searchWrap{
+
+      @media screen and ( max-width: 768px ) {
+
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        row-gap: $apx-l-14;
+  
+      }
+
+
+    }
+
     div{
 
       display: flex;
@@ -113,26 +167,101 @@
       width: $apx-323;
       height: $apx-39;
 
+      @media screen and ( max-width: 768px ) {
+
+        width: $apx-l-323;
+        height: $apx-l-39;
+
+      }
+
     }
 
-    svg{
+    .iconsWrap{
 
-      &:first-child{
+      display: flex;
+      align-items: center;
+      column-gap: $apx-14;
+      margin-left: $apx-42;
 
-        width: $apx-20;
-        height: $apx-18;
+      @media screen and ( max-width: 768px ) {
 
-      }
-
-      &:last-child{
-
-        width: $apx-22;
-        height: $apx-21;
+        column-gap: $apx-l-14;
+        margin-left: 0;
 
       }
 
+      .likeWrap{
+
+        svg{
+
+          width: $apx-20;
+          height: $apx-18;
+
+          @media screen and ( max-width: 768px ) {
+  
+            width: $apx-l-40;
+            height: $apx-l-38;
+  
+          }
+
+        }
+
+      }
+
+      .basketWrap{
+
+        svg{
+
+          width: $apx-22;
+          height: $apx-21;
+
+          @media screen and ( max-width: 768px ) {
+  
+            width: $apx-l-42;
+            height: $apx-l-41;
+  
+          }
+
+        }
+
+      }
+  
     }
 
   }
 
+}
+
+.mobileMenu {
+
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+}
+
+.hamburger {
+
+  display: none !important;
+
+  @media screen and (max-width: 768px) {
+
+    display: block !important;
+    cursor: pointer;
+    margin-right: $apx-l-36;
+
+    svg{
+
+      width: $apx-l-100;
+      height: $apx-l-100;
+
+    }
+
+  }
+  
 }
