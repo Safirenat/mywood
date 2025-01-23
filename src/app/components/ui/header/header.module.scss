@@ -17,6 +17,12 @@
 
   }
 
+  @media screen and ( max-width: 475px ) {
+
+    height: $apx-m-100;
+
+  }
+
 
   .left{
 
@@ -72,7 +78,7 @@
 
         }
 
-        @media screen and ( max-width: 390px ) {
+        @media screen and ( max-width: 475px ) {
 
           font-size: $apx-m-14;
           column-gap: $apx-m-10;

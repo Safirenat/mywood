@@ -23,7 +23,7 @@
     
   }
 
-  @media screen and ( max-width: 390px ) {
+  @media screen and ( max-width: 475px ) {
 
     grid-template-columns: 1fr;
     row-gap: $apx-m-10;
@@ -49,10 +49,13 @@
 
   }
 
-  @media screen and ( max-width: 390px ) {
+  @media screen and ( max-width: 475px ) {
 
     gap: $apx-m-39;
+    margin-top: $apx-m-99;
     margin-bottom: $apx-m-61;
+    margin-left: $apx-m-2;
+    margin-right: $apx-m-2;
 
   }
 
@@ -74,7 +77,7 @@
 
     }
 
-    @media screen and ( max-width: 390px ) {
+    @media screen and ( max-width: 475px ) {
       
       max-width: $apx-m-170;
       border-radius: $apx-m-6;
@@ -101,7 +104,7 @@
 
   }
 
-  @media screen and ( max-width: 390px ) {
+  @media screen and ( max-width: 475px ) {
 
     font-size: $apx-m-24;
   }
@@ -119,7 +122,7 @@
 
     }
   
-    @media screen and ( max-width: 390px ) {
+    @media screen and ( max-width: 475px ) {
 
       font-size: $apx-m-24;
       margin-left: $apx-m-26;
