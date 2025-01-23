@@ -1,5 +1,5 @@
-@import '../../../styles/adaptivepx.scss';
-@import '../../../styles/mixins.scss';
+@use '../../../styles/adaptivepx.scss' as *;
+@use '../../../styles/mixins.scss' as *;
 
 .root{
 

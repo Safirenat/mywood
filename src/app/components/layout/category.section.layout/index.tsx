@@ -3,7 +3,7 @@
 import { FC } from "react";
 import s from "./category.section.layout.module.scss";
 import CategorySection from "../../sections/category.section";
-import Button from "../../button";
+import Button from "../../ui/button";
 
 const items = [
 

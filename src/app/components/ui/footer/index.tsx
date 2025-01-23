@@ -42,7 +42,7 @@ const Footer: FC = () => {
 
       <div className = { s.hamburger }>
 
-      <HamburgerIcon />
+        <HamburgerIcon />
 
       </div>
 
@@ -52,7 +52,7 @@ const Footer: FC = () => {
         <span >Республика Марий Эл</span>
         <span >пгт.Параньга</span>
         <span >+7 919 646-50-74</span>
-        
+
         <div className = { s.icons }>
 
           <VkIcon/>
