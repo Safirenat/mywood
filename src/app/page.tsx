@@ -3,19 +3,25 @@ import styles from "./page.module.css";
 import MainContainer from "./components/containers/main.container";
 import HomeSection from "./components/sections/home.section";
 import CategorySectionLayout from "./components/layout/category.section.layout";
+import Head from 'next/head';
 
 export default function Home() {
 
   return (
 
     <>
+      <Head>
 
-    <MainContainer>
+        <link rel = "icon" href = "/favicon.ico" />
 
-      <HomeSection/>
-      <CategorySectionLayout/>
+      </Head>
 
-    </MainContainer>
+      <MainContainer>
+
+        <HomeSection/>
+        <CategorySectionLayout/>
+
+      </MainContainer>
 
     </>
     
