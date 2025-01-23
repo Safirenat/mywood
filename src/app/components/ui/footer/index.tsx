@@ -5,6 +5,7 @@ import s from "./footer.module.scss";
 import Logo from "../logo";
 import VkIcon from "../../icons/vk";
 import TgIcon from "../../icons/tg";
+import HamburgerIcon from "../../icons/hamburger";
 
 const Footer: FC = () => {
 
@@ -39,12 +40,19 @@ const Footer: FC = () => {
 
       </div>
 
+      <div className = { s.hamburger }>
+
+      <HamburgerIcon />
+
+      </div>
+
       <div className = { s.contacts }>
 
         <span >Контакты</span>
         <span >Республика Марий Эл</span>
         <span >пгт.Параньга</span>
         <span >+7 919 646-50-74</span>
+        
         <div className = { s.icons }>
 
           <VkIcon/>
