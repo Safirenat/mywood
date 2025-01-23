@@ -19,8 +19,6 @@
   @media screen and ( max-width: 768px ) {
 
     grid-template-columns: 1fr 1fr;
-    // column-gap: $apx-l-17;
-    // row-gap: $apx-l-19;
     gap: $apx-l-20;
     
   }
@@ -45,7 +43,8 @@
 
   @media screen and ( max-width: 768px ) {
 
-    margin-left: 0;
+    margin-left: $apx-l-60;
+    margin-right: $apx-l-30;
     margin-bottom: $apx-l-46;
 
   }
