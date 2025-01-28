@@ -4,9 +4,10 @@
 
   display: flex;
   flex-direction: column;
-  padding: 0 $apx-16;
+  // padding: 0 $apx-16;
   margin: 0 auto;
   max-width: $apx-1440;
+  background-color: #FAFAF2;
 
   .content { flex-grow: 1; }
 
@@ -23,12 +24,13 @@
 
 }
 
-@media screen and ( max-width: 390px ) {
+@media screen and ( max-width: 475px ) {
 
   .mainContainer {
 
-    padding: 0 $apx-m-16;
-    max-width: 100%;
+    // padding: 0 $apx-m-16;
+    padding: 0 ;
+    // max-width: 100%;
 
     // .content {
 

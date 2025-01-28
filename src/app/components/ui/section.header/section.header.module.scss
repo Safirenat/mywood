@@ -1,0 +1,105 @@
+@use '../../../styles/adaptivepx.scss' as *;
+  
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-transform: uppercase;
+
+    margin-bottom: $apx-40;
+    margin-left: $apx-115;
+
+    @media screen and ( max-width: 768px ) {
+
+        margin-left: $apx-l-60;
+        margin-right: $apx-l-30;
+        margin-bottom: $apx-l-46;
+
+    }
+
+    @media screen and ( max-width: 475px ) {
+
+        gap: $apx-m-39;
+        margin-top: $apx-m-99;
+        margin-bottom: $apx-m-61;
+        margin-left: $apx-m-2;
+        margin-right: $apx-m-2;
+
+    }
+
+button{
+
+    padding: $apx-20 $apx-117;
+    border-radius: $apx-6;
+
+    font-size: $apx-20;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    @media screen and ( max-width: 768px ) {
+
+        padding: $apx-l-16 $apx-l-81;
+        border-radius: $apx-l-6;
+
+        font-size: $apx-l-16;
+
+    }
+
+    @media screen and ( max-width: 475px ) {
+    
+        max-width: $apx-m-170;
+        border-radius: $apx-m-6;
+        padding: $apx-m-16 $apx-m-30;
+        
+        font-size: $apx-m-16;
+
+    }
+
+}
+
+}
+
+.title {
+
+    font-family: Cormorant Unicase;
+    font-size: $apx-48;
+    font-weight: 500; 
+    line-height: 100%;
+
+    @media screen and ( max-width: 768px ) {
+
+        font-size: $apx-l-36;
+
+    }
+
+    @media screen and ( max-width: 475px ) {
+
+        font-size: $apx-m-24;
+    }
+
+    .subTitle{
+
+        font-weight: 400; 
+        color: #CD9872;
+        margin-left: $apx-100;
+
+
+        @media screen and ( max-width: 768px ) {
+
+            font-size: $apx-l-36;
+            margin-left: $apx-l-39;
+
+        }
+
+        @media screen and ( max-width: 475px ) {
+
+            font-size: $apx-m-24;
+            margin-left: $apx-m-26;
+
+        }
+
+    }
+
+}

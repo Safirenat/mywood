@@ -3,6 +3,8 @@
 
 .root{
 
+  position: relative;
+
   display: flex;
   align-items: center;
   column-gap: $apx-134;
@@ -13,12 +15,16 @@
 
   @media screen and ( max-width: 768px ) {
 
+    padding: $apx-l-6 $apx-l-30 $apx-l-14 $apx-l-43;
+
     column-gap: $apx-l-150;
 
   }
 
   @media screen and ( max-width: 475px ) {
 
+    padding: $apx-m-10 $apx-m-10 $apx-m-10 $apx-m-10;
+    align-items: flex-start;
     height: $apx-m-100;
 
   }
@@ -109,6 +115,13 @@
 
           }
 
+          @media screen and ( max-width: 475px ) { 
+
+            width: $apx-m-14;
+            height: $apx-m-14;
+
+          }
+
         }
 
       }
@@ -165,6 +178,24 @@
   
       }
 
+      @media screen and ( max-width: 475px ) { 
+
+        row-gap: $apx-m-14;
+
+      }
+
+      .search{
+
+        @media screen and ( max-width: 475px ) { 
+          
+          max-width: $apx-m-160;
+          position: absolute;
+          left: $apx-m-56;
+          bottom: $apx-m-20;
+ 
+        }
+
+      }
 
     }
 
@@ -186,6 +217,12 @@
 
       }
 
+      @media screen and ( max-width: 475px ) { 
+
+        width: $apx-m-200;
+        height: $apx-m-20;
+      }
+
     }
 
     .iconsWrap{
@@ -199,6 +236,17 @@
 
         column-gap: $apx-l-14;
         margin-left: 0;
+
+      }
+
+      @media screen and ( max-width: 475px ) { 
+
+        column-gap: $apx-m-14;
+        margin-left: 0;
+
+        position: absolute;
+        right: $apx-m-34;
+        bottom: $apx-m-18;
 
       }
 
@@ -216,6 +264,12 @@
   
           }
 
+          @media screen and ( max-width: 475px ) {  
+
+            width: $apx-m-20;
+            height: $apx-m-18;
+
+          }
         }
 
       }
@@ -234,6 +288,12 @@
   
           }
 
+          @media screen and ( max-width: 475px ) {  
+
+            width: $apx-m-20;
+            height: $apx-m-18;
+            
+          }
         }
 
       }
@@ -274,6 +334,19 @@
 
     }
 
+  }
+
+  @media screen and ( max-width: 475px ) { 
+    display: block !important;
+    cursor: pointer;
+    margin-right: $apx-m-36;
+
+    svg{
+
+      width: $apx-m-60;
+      height: $apx-m-60;
+
+    }
   }
   
 }

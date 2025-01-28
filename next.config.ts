@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   images: {
 
     domains: ['avatars.mds.yandex.net'],
+    unoptimized: true,
 
   },
   output: 'export',

@@ -3,7 +3,7 @@
 import { FC } from "react";
 import s from "./category.section.layout.module.scss";
 import CategorySection from "../../sections/category.section";
-import Button from "../../ui/button";
+import { SectionHeader } from "../../ui/section.header/section.header";
 
 const items = [
 
@@ -65,18 +65,13 @@ const CategorySectionLayout = () => {
 
     <div className = { s.root }>
 
-      <div className = { s.header }>
+      <SectionHeader
 
-        <div className = { s.title }>Категории <br/> 
+        title = "Категории"
+        subtitle = "товаров"
+        buttonLabel = "КАТАЛОГ"
 
-          <span className = { s.subTitle }>товаров
-          </span>
-
-        </div>
-        
-        <Button label = "КАТАЛОГ" variant = "outline" />
-
-      </div>
+      />
 
 
       <div className = { s.items }>
