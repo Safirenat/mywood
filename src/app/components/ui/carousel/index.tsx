@@ -59,12 +59,31 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
         ←
       </button>
 
+      <div className={styles.pagination}>
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${
+                (currentSlide - slides.length) % slides.length === index ? styles.active : ''
+              }`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
+
+      <button 
+        className={`${styles.arrow} ${styles.arrowRight}`} 
+        onClick={nextSlide}
+      >
+        →
+      </button>
+
       <div className={styles.slideContainer}>
         <div 
           className={styles.slidesWrapper}
           style={{ 
             transform: `translateX(-${(currentSlide * 100) / 3}%)`,
-            transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
+            transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none',
           }}
           onTransitionEnd={handleTransitionEnd}
         >
@@ -76,8 +95,10 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
                 className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
                 style={{
                 //   backgroundColor: isMiddleSlide ? 'red' : 'transparent',
-                  height: isMiddleSlide ? '100%' : '300px',
-                //   transform: isMiddleSlide ? 'none' : 'scale(0.9)'
+                  height: isMiddleSlide ? '100%' : '325px',
+                //   transform: isMiddleSlide ? 'none' : 'scale(0.8)',
+                //   marginTop: isMiddleSlide ? '0px' : '-110px'
+                // width: isMiddleSlide ? '190px' : '565px',
                 }}
               >
                 <div className={styles.imageWrapper}>
@@ -96,25 +117,10 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
           })}
         </div>
 
-        <div className={styles.pagination}>
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.dot} ${
-                (currentSlide - slides.length) % slides.length === index ? styles.active : ''
-              }`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div>
+       
       </div>
 
-      <button 
-        className={`${styles.arrow} ${styles.arrowRight}`} 
-        onClick={nextSlide}
-      >
-        →
-      </button>
+     
     </div>
   )
 }

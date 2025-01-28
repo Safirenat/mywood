@@ -1,7 +1,10 @@
+@use '../../../styles/adaptivepx.scss' as *;
+
+
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
     overflow: hidden;
@@ -21,32 +24,33 @@
   .slide {
     flex: 0 0 calc((100% - 60px) / 3);
     position: relative;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
     aspect-ratio: 3/4;
     background: #fff;
-    padding: 8px;
+    padding: 26px 30px 56px 30px;
     border: 1px solid #e0e0e0;
   }
   
   .imageWrapper {
     width: 100%;
-    height: 100%;
+    height: 92%;
     position: relative;
+  }
+
+  .middleSlide{
+    background-color: red;
   }
   
   .image {
     width: 100%;
     height: 100%;
+    // width: $apx-265;
+    // height: $apx-310;
     object-fit: cover;
-    border-radius: 4px;
+    border-radius: 10px;
   }
 
-  // ... существующий код ...
-//   .middleSlide {
-//     background-color: red; // Устанавливаем красный цвет для среднего слайда
-//   }
-  
   .content {
     position: absolute;
     bottom: 16px;
@@ -62,11 +66,14 @@
     font-size: 18px;
     color: #333;
     margin-bottom: 4px;
+    text-align: left;
   }
   
   .subtitle {
     font-size: 14px;
     color: #666;
+    text-align: left;
+
   }
   
   .arrow {
@@ -91,11 +98,13 @@
     }
   
     &.arrowLeft {
-      left: 0;
+        top: 400px;
+        left:82px;
     }
   
     &.arrowRight {
-      right: 0;
+        top: 400px;
+        left: 340px;
     }
   }
   
@@ -110,6 +119,10 @@
   }
 
   .pagination {
+
+    position: absolute;
+    top: 378px;
+    left: 190px;
     display: flex;
     justify-content: center;
     gap: 8px;
