@@ -15,13 +15,13 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
 
   const nextSlide = () => {
     setCurrentSlide((prev) => 
-      prev === slides.length - 1 ? 0 : prev + 1
+      prev >= slides.length - 3 ? slides.length - 3 : prev + 1
     )
   }
 
   const prevSlide = () => {
     setCurrentSlide((prev) => 
-      prev === 0 ? slides.length - 1 : prev - 1
+      prev <= 0 ? 0 : prev - 1
     )
   }
 
@@ -30,6 +30,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
       <button 
         className={`${styles.arrow} ${styles.arrowLeft}`} 
         onClick={prevSlide}
+        disabled={currentSlide === 0}
       >
         ←
       </button>
@@ -66,6 +67,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
       <button 
         className={`${styles.arrow} ${styles.arrowRight}`} 
         onClick={nextSlide}
+        disabled={currentSlide >= slides.length - 3}
       >
         →
       </button>
