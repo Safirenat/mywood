@@ -41,6 +41,11 @@
     object-fit: cover;
     border-radius: 4px;
   }
+
+  // ... существующий код ...
+  .middleSlide {
+    background-color: red; // Устанавливаем красный цвет для среднего слайда
+  }
   
   .content {
     position: absolute;

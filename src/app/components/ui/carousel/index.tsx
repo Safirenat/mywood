@@ -68,24 +68,30 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
           }}
           onTransitionEnd={handleTransitionEnd}
         >
-          {carouselSlides.map((slide, index) => (
-            <div
-              key={`${slide.id}-${index}`}
-              className={styles.slide}
-            >
-              <div className={styles.imageWrapper}>
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className={styles.image}
-                />
+          {carouselSlides.map((slide, index) => {
+            const isMiddleSlide = index === currentSlide;
+            return (
+              <div
+                key={`${slide.id}-${index}`}
+                className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
+                style={{
+                  backgroundColor: isMiddleSlide ? 'red' : 'transparent'
+                }}
+              >
+                <div className={styles.imageWrapper}>
+                  <img
+                    src={slide.image}
+                    alt={slide.title}
+                    className={styles.image}
+                  />
+                </div>
+                <div className={styles.content}>
+                  <h3 className={styles.title}>{slide.title}</h3>
+                  <p className={styles.subtitle}>{slide.subtitle}</p>
+                </div>
               </div>
-              <div className={styles.content}>
-                <h3 className={styles.title}>{slide.title}</h3>
-                <p className={styles.subtitle}>{slide.subtitle}</p>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
 
         <div className={styles.pagination}>
