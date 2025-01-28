@@ -69,7 +69,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
           onTransitionEnd={handleTransitionEnd}
         >
           {carouselSlides.map((slide, index) => {
-            const isMiddleSlide = index === currentSlide;
+            const isMiddleSlide = index === currentSlide + 1;
             return (
               <div
                 key={`${slide.id}-${index}`}
