@@ -75,7 +75,9 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
                 key={`${slide.id}-${index}`}
                 className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
                 style={{
-                  backgroundColor: isMiddleSlide ? 'red' : 'transparent'
+                //   backgroundColor: isMiddleSlide ? 'red' : 'transparent',
+                  height: isMiddleSlide ? '100%' : '300px',
+                //   transform: isMiddleSlide ? 'none' : 'scale(0.9)'
                 }}
               >
                 <div className={styles.imageWrapper}>
