@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useState, useEffect } from 'react'
 import styles from './carousel.module.scss'
 
 interface CarouselProps {
@@ -11,18 +11,43 @@ interface CarouselProps {
 }
 
 export const Carousel: FC<CarouselProps> = ({ slides }) => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+  const [currentSlide, setCurrentSlide] = useState(slides.length)
+  const [carouselSlides, setCarouselSlides] = useState<typeof slides>([])
+  const [isTransitioning, setIsTransitioning] = useState(false)
+
+  useEffect(() => {
+    // Создаем массив с дублированными слайдами в начале и конце
+    setCarouselSlides([...slides, ...slides, ...slides])
+  }, [slides])
+
+  const handleTransitionEnd = () => {
+    setIsTransitioning(false)
+    // Если дошли до конца второго набора слайдов
+    if (currentSlide >= slides.length * 2) {
+      setCurrentSlide(slides.length)
+    }
+    // Если дошли до начала второго набора слайдов
+    if (currentSlide <= slides.length - 1) {
+      setCurrentSlide(slides.length * 2 - 1)
+    }
+  }
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => 
-      prev >= slides.length - 3 ? slides.length - 3 : prev + 1
-    )
+    if (!isTransitioning) {
+      setIsTransitioning(true)
+      setCurrentSlide(prev => prev + 1)
+    }
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => 
-      prev <= 0 ? 0 : prev - 1
-    )
+    if (!isTransitioning) {
+      setIsTransitioning(true)
+      setCurrentSlide(prev => prev - 1)
+    }
+  }
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(slides.length + index)
   }
 
   return (
@@ -30,7 +55,6 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
       <button 
         className={`${styles.arrow} ${styles.arrowLeft}`} 
         onClick={prevSlide}
-        disabled={currentSlide === 0}
       >
         ←
       </button>
@@ -39,13 +63,14 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
         <div 
           className={styles.slidesWrapper}
           style={{ 
-            transform: `translateX(-${currentSlide * (100/3)}%)`,
-            transition: 'transform 0.5s ease-in-out'
+            transform: `translateX(-${(currentSlide * 100) / 3}%)`,
+            transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none'
           }}
+          onTransitionEnd={handleTransitionEnd}
         >
-          {slides.map((slide) => (
+          {carouselSlides.map((slide, index) => (
             <div
-              key={slide.id}
+              key={`${slide.id}-${index}`}
               className={styles.slide}
             >
               <div className={styles.imageWrapper}>
@@ -62,12 +87,23 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
             </div>
           ))}
         </div>
+
+        <div className={styles.pagination}>
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${
+                (currentSlide - slides.length) % slides.length === index ? styles.active : ''
+              }`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
       </div>
 
       <button 
         className={`${styles.arrow} ${styles.arrowRight}`} 
         onClick={nextSlide}
-        disabled={currentSlide >= slides.length - 3}
       >
         →
       </button>
