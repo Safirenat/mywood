@@ -2,7 +2,7 @@
 
 import { FC } from "react";
 import s from "./carousel.home.section.module.scss";
-import { SectionHeader } from "../../ui/section.header/section.header";
+import { SectionHeader } from "../../ui/section.header";
 import { Carousel } from "../../ui/carousel";
 
 const slides = [
