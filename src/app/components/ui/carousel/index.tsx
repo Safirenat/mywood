@@ -1,5 +1,7 @@
 import { FC, useState, useEffect } from 'react'
 import styles from './carousel.module.scss'
+import apx from '../../../styles/adaptivepx'
+
 
 interface CarouselProps {
   slides: {
@@ -94,11 +96,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
                 key={`${slide.id}-${index}`}
                 className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
                 style={{
-                //   backgroundColor: isMiddleSlide ? 'red' : 'transparent',
-                  height: isMiddleSlide ? '400px' : '325px',
-                //   transform: isMiddleSlide ? 'none' : 'scale(0.8)',
-                //   marginTop: isMiddleSlide ? '0px' : '-110px'
-                // width: isMiddleSlide ? '190px' : '565px',
+                  height: isMiddleSlide ? `${apx.d(400)}` : `${apx.d(325)}`,
                 }}
               >
                 <div className={styles.imageWrapper}>
@@ -116,11 +114,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
             )
           })}
         </div>
-
-       
       </div>
-
-     
     </div>
   )
 }
