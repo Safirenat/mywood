@@ -1,0 +1,48 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: calc(33.33% - 10px);
+  margin: 0 25px;
+  box-sizing: border-box;
+  transition: transform 0.5s ease, height 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007aff;
+  color: #fff;
+  font-size: 24px;
+  height: 300px;
+}
+
+.active {
+  transform: scale(1.2);
+  height: 350px;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
