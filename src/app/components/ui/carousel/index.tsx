@@ -95,7 +95,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
                 className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
                 style={{
                 //   backgroundColor: isMiddleSlide ? 'red' : 'transparent',
-                  height: isMiddleSlide ? '100%' : '325px',
+                  height: isMiddleSlide ? '400px' : '325px',
                 //   transform: isMiddleSlide ? 'none' : 'scale(0.8)',
                 //   marginTop: isMiddleSlide ? '0px' : '-110px'
                 // width: isMiddleSlide ? '190px' : '565px',

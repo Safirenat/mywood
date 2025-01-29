@@ -4,7 +4,6 @@ import { FC } from "react";
 import s from "./carousel.home.section.module.scss";
 import { SectionHeader } from "../../ui/section.header";
 import { Carousel } from "../../ui/carousel";
-import Slider from "../../ui/slider/Index";
 
 const slides = [
     {
@@ -71,7 +70,6 @@ const CarouselHomeSection = () => {
       </div>
 
       <Carousel slides={slides} />
-      <Slider/>
 
 
     </div>

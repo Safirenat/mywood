@@ -98,13 +98,13 @@
     }
   
     &.arrowLeft {
-        top: 400px;
-        left:82px;
+        top: 370px;
+        left: 46px;
     }
   
     &.arrowRight {
-        top: 400px;
-        left: 340px;
+        top: 370px;
+        left: 338px;
     }
   }
   
@@ -121,8 +121,8 @@
   .pagination {
 
     position: absolute;
-    top: 378px;
-    left: 190px;
+    top: 350px;
+    left: 172px;
     display: flex;
     justify-content: center;
     gap: 8px;
