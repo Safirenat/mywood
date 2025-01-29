@@ -73,6 +73,13 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
           ))}
         </div>
 
+        <div className = { styles.text }>
+
+            Сделано с душой <br/>
+            для вашего комфорта
+
+        </div>
+
       <button 
         className={`${styles.arrow} ${styles.arrowRight}`} 
         onClick={nextSlide}
@@ -96,7 +103,8 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
                 key={`${slide.id}-${index}`}
                 className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
                 style={{
-                  height: isMiddleSlide ? `${apx.d(400)}` : `${apx.d(325)}`,
+                  height: isMiddleSlide ? `${apx.d(500)}` : `${apx.d(392)}`,
+
                 }}
               >
                 <div className={styles.imageWrapper}>

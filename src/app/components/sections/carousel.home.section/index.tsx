@@ -8,7 +8,7 @@ import { Carousel } from "../../ui/carousel";
 const slides = [
     {
       id: 1,
-      image: '/img/bg-home-section.png',
+      image: '/img/combo.jpg',
       title: 'Двери',
       subtitle: 'для бани'
     },
@@ -20,7 +20,7 @@ const slides = [
     },
     {
       id: 3,
-      image: '/img/steklo.jpg',
+      image: '/img/combo.jpg',
       title: 'Двери',
       subtitle: 'для вашего комфорта'
     },
@@ -69,8 +69,7 @@ const CarouselHomeSection = () => {
 
       </div>
 
-      <Carousel slides={slides} />
-
+      <Carousel slides = { slides } />
 
     </div>
 
