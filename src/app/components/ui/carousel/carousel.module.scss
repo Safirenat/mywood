@@ -31,12 +31,14 @@
 
     @media (max-width: 768px) {
 
-        width: $apx-960;
+      // width: $apx-960;
+      width: 100%;
 
     }
 
     @media screen and ( max-width: 475px ) {
-        width: 100%;
+
+      width: 200%;
 
     }
 
@@ -57,18 +59,23 @@
     @media (max-width: 768px) {
 
         // flex: 0 0 calc((100% - $apx-l-10));
-        flex: 0 0 calc((100% + $apx-l-460) / 2);
+        flex: 0 0 calc((100% - $apx-l-20) / 2);
         height: $apx-l-340;
         padding: $apx-l-26 $apx-l-30 $apx-l-56 $apx-l-30;
         border-radius: $apx-l-10;
         border: $apx-l-1 solid #e0e0e0;
+        height: $apx-l-410;
 
 
     }
 
     @media screen and ( max-width: 475px ) {
 
-        
+      // flex: 0 0 50%;
+      padding: $apx-m-26 $apx-m-30 $apx-m-56 $apx-m-30;
+      border-radius: $apx-m-10;
+      border: $apx-m-1 solid #e0e0e0;
+      height: $apx-m-211;     
 
     }
   
@@ -81,7 +88,7 @@
 
     @media (max-width: 768px) {
 
-        width: 200px;
+      width: 200px;
 
     }
 
@@ -99,9 +106,28 @@
 
     }
 
+    @media screen and ( max-width: 475px ) {
+
+      // min-height: $apx-m-320;
+      // height: $apx-m-180;
+
+    }
+
     img{
      
-        height: $apx-380;
+      height: $apx-380;
+
+      @media (max-width: 768px) {
+
+        height: $apx-l-370;
+
+      }
+
+      @media screen and ( max-width: 475px ) {
+
+        // height: $apx-m-191;
+
+      }
 
     }
 
@@ -186,15 +212,43 @@
   
     &.arrowLeft {
 
-        top: $apx-480;
-        left: $apx-46;
+      top: $apx-480;
+      left: $apx-46; 
+      
+      @media (max-width: 768px) {
+
+        top: $apx-l-380;
+        left: $apx-l-86;
+
+      }
+
+      @media screen and ( max-width: 475px ) {
+
+        top: $apx-m-200;
+        left: $apx-m-56;
+
+      }
 
     }
   
     &.arrowRight {
 
-        top: $apx-480;
-        left: $apx-398;
+      top: $apx-480;
+      left: $apx-398;
+      
+      @media (max-width: 768px) {
+
+        top: $apx-l-380;
+        left: $apx-l-396;
+
+      } 
+
+      @media screen and ( max-width: 475px ) {
+
+        top: $apx-m-200;
+        left: $apx-m-196;
+
+      }
 
     }
 
@@ -211,6 +265,7 @@
     .slidesWrapper {
 
       transform: none !important;
+      gap: $apx-l-20;
 
     }
   }
@@ -226,6 +281,14 @@
     gap: $apx-8;
     margin-top: $apx-20;
     z-index: 3;
+
+    @media (max-width: 768px) {
+
+      top: $apx-l-370;
+      left: $apx-l-199;
+
+    }
+
   }
   
   .dot {
