@@ -103,7 +103,7 @@ export const Carousel: FC<CarouselProps> = ({ slides }) => {
                 key={`${slide.id}-${index}`}
                 className={`${styles.slide} ${isMiddleSlide ? styles.middleSlide : ''}`}
                 style={{
-                  height: isMiddleSlide ? `${apx.d(500)}` : `${apx.d(392)}`,
+                //   height: isMiddleSlide ? `${apx.d(500)}` : `${apx.d(392)}`,
 
                 }}
               >

@@ -8,6 +8,12 @@
     padding: 0 $apx-40;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+
+        padding: 0 $apx-20;
+
+    }
+
   }
   
   .slideContainer {
@@ -23,6 +29,17 @@
     width: 100%;
     gap: $apx-20;
 
+    @media (max-width: 768px) {
+
+        width: $apx-960;
+
+    }
+
+    @media screen and ( max-width: 475px ) {
+        width: 100%;
+
+    }
+
   }
   
   .slide {
@@ -34,8 +51,27 @@
     aspect-ratio: 3/4;
     background: #fff;
     padding: $apx-26 $apx-30 $apx-56 $apx-30;
-    border: 1px solid #e0e0e0;
+    border: $apx-1 solid #e0e0e0;
+    height: $apx-392;
 
+    @media (max-width: 768px) {
+
+        // flex: 0 0 calc((100% - $apx-l-10));
+        flex: 0 0 calc((100% + $apx-l-460) / 2);
+        height: $apx-l-340;
+        padding: $apx-l-26 $apx-l-30 $apx-l-56 $apx-l-30;
+        border-radius: $apx-l-10;
+        border: $apx-l-1 solid #e0e0e0;
+
+
+    }
+
+    @media screen and ( max-width: 475px ) {
+
+        
+
+    }
+  
   }
   
   .imageWrapper {
@@ -43,11 +79,25 @@
     width: 100%;
     position: relative;
 
+    @media (max-width: 768px) {
+
+        width: 200px;
+
+    }
+
   }
 
   .middleSlide{
 
     min-height: $apx-320;
+    height: $apx-500;
+
+    @media (max-width: 768px) {
+
+        // min-height: $apx-l-320;
+        // height: $apx-l-380;
+
+    }
 
     img{
      
@@ -152,11 +202,11 @@
   
   @media (max-width: 768px) {
 
-    .slide {
+    // .slide {
 
-      flex: 0 0 calc(100% - $apx-20);
+    //   flex: 0 0 calc(100% - $apx-20);
 
-    }
+    // }
     
     .slidesWrapper {
 

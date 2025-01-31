@@ -8,9 +8,23 @@
     padding-left: $apx-40;
     padding-right: $apx-40;
 
+    @media (max-width: 768px) {
+
+        padding-left: $apx-20;
+        padding-right: $apx-20;
+
+    }
+
     .text{
 
         margin-bottom: $apx-74;
+
+        @media (max-width: 768px) {
+
+            margin-bottom: $apx-l-40;
+
+        }
+
     }
 
 
