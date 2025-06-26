@@ -11,21 +11,21 @@ const items = [
 
     title: "Деревянные двери",
     image: "/img/combo.jpg",
-    link: "#"
+    link: "/catalog/Деревянные%20двери"
 
   },
   {
 
     title: "Комбинированные двери",
     image: "/img/combo.jpg",
-    link: "#"
+    link: "/catalog/Комбинированные%20двери"
 
   },
   {
 
     title: "Стеклянные двери",
     image: "/img/steklo.jpg",
-    link: "#"
+    link: "/catalog/Стеклянные%20двери"
 
   },
   {

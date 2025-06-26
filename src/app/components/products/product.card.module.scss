@@ -1,0 +1,14 @@
+@use '../../styles/adaptivepx.scss' as *;
+
+.cartWrapper {
+  width: 325px;
+  height: 450px;
+
+  padding-top: $apx-15;
+  padding-bottom: $apx-15;
+  padding-left: $apx-30;
+  padding-right: $apx-30;
+  border: 1px solid #7C7C63;
+  border-radius: 8px;
+
+}
