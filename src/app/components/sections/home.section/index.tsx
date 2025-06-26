@@ -23,7 +23,7 @@ const HomeSection: FC = () => {
         <div className = { s.item }>
 
           <ProductionIcon/>
-          <div>Собственное ннннн производство</div>
+          <div>Собственное ннннкккккн производство</div>
 
         </div>
 
