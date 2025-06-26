@@ -15,7 +15,7 @@ export const categorizedProducts = {
     },
     {
       id: 3,
-      title: 'Деревянная дверь «"Элит"»',
+      title: 'Деревянная дверь  «"Элит"»',
       image: '/img/derevo.jpg',
 
     },
