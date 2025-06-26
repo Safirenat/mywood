@@ -24,7 +24,6 @@ const HomeSection: FC = () => {
 
           <ProductionIcon/>
           <div>Собственное производство</div>
-          <div>Собственное производство</div>
 
         </div>
 
