@@ -9,7 +9,9 @@ export function generateStaticParams() {
   const categories = Object.keys(categorizedProducts)
 
   return categories.map(category => ({
+    
     category: encodeURIComponent(category),
+
   }))
 }
 
