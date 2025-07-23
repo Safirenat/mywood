@@ -8,6 +8,14 @@
   padding-left: $apx-40;
   padding-right: $apx-40;
 
+   @media screen and ( max-width: 475px ) {
+    padding-top: $apx-m-20;
+    margin-bottom: $apx-m-20;
+    padding-left: $apx-m-10;
+    padding-right: $apx-m-10;
+    
+   }
+
 }
 
 .items{

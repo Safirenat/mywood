@@ -131,8 +131,9 @@
     
       position: static;
       width: $apx-m-105;
+      column-gap: $apx-m-20;
 
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       justify-content: center;
       margin: 0 auto;
 
@@ -164,6 +165,8 @@
 
         margin: $apx-m-4;
         margin-bottom: $apx-m-30;
+        font-size: $apx-m-8;
+
 
       }
 

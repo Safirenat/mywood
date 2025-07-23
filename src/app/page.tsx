@@ -20,7 +20,7 @@ export default function Home() {
       <MainContainer>
         <HomeSection/>
         <CategorySectionLayout/>
-        <CarouselHomeSection/>
+        {/* <CarouselHomeSection/> */}
 
       </MainContainer>
 
