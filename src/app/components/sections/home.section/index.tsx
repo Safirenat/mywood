@@ -15,7 +15,7 @@ const HomeSection: FC = () => {
 
     <div className = { s.root }>
 
-      <div className = { s.title }>Качественные22225<br/> <span>изделия из дерева</span><br/> от производителя</div>
+      <div className = { s.title }>Качественные<br/> <span>изделия из дерева</span><br/> от производителя</div>
       <div className = { s.subtitle }>Предоставляем инновационные, качественные<br/> и стильные решения для бань и саун.</div>
 
       <div className = { s.icons }>
