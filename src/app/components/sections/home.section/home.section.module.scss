@@ -15,7 +15,7 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  @media screen and ( max-width: 768px ) {
+  @media screen and ( max-width: 1024px ) {
 
     height: $apx-l-609;
     padding: $apx-l-112 $apx-l-16 $apx-l-72 $apx-l-138;
@@ -40,7 +40,7 @@
     text-transform: uppercase;
     margin-bottom: $apx-24;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       font-size: $apx-l-48;
       margin-bottom: $apx-l-24;
@@ -63,7 +63,7 @@
       color: #ED7926; 
       line-height: 100%;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         font-size: $apx-l-64;
 
@@ -89,7 +89,7 @@
     color: #FAFAF2;
     margin-bottom: $apx-72;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       font-size: $apx-l-24;
       line-height: 120%;
@@ -116,7 +116,7 @@
     line-height: 100%;
     color: #FAFAF2;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       position: absolute;
       left: 16%;
@@ -150,7 +150,7 @@
       align-items: center;
       text-align: center;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         font-size: $apx-l-18;
         line-height: 110%;
@@ -172,7 +172,7 @@
         width: $apx-32;
         height: $apx-29;
 
-        @media screen and ( max-width: 768px ) {
+        @media screen and ( max-width: 1024px ) {
 
           width: $apx-l-45;
           height: $apx-l-42;
@@ -200,7 +200,7 @@
   
       z-index: 3;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         top: -$apx-l-50;
         right: -$apx-l-100;

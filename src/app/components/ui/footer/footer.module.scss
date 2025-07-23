@@ -8,7 +8,7 @@
   background-color: #444402;
   z-index: 4;
 
-  @media screen and ( max-width: 768px ) {
+  @media screen and ( max-width: 1024px ) {
 
     padding: $apx-l-40 $apx-l-4 $apx-l-120 $apx-l-40;
 
@@ -28,7 +28,7 @@
 
     display: none !important;
   
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
   
       display: block !important;
       cursor: pointer;
@@ -59,7 +59,7 @@
         width: $apx-80;
         height: $apx-80;
 
-        @media screen and ( max-width: 768px ) {
+        @media screen and ( max-width: 1024px ) {
 
           width: $apx-l-150;
           height: $apx-l-150;
@@ -75,7 +75,7 @@
 
       }
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         margin-right: $apx-l-250;
 
@@ -91,7 +91,7 @@
       white-space: nowrap;
       color: #FAFAF2;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         font-size: $apx-l-18;
 
@@ -131,7 +131,7 @@
 
     }
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       display: none;  
 
@@ -163,7 +163,7 @@
 
     }
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       display: none;
 
@@ -177,7 +177,7 @@
     flex-direction: column;
     row-gap: $apx-10;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       row-gap: $apx-l-10;
 
@@ -197,7 +197,7 @@
       color: #FAFAF2;
       white-space: nowrap;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         font-size: $apx-l-24;
 
@@ -222,7 +222,7 @@
       display: flex;
       column-gap: $apx-20;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         column-gap: $apx-l-20;
         margin-top: $apx-l-10;
@@ -240,7 +240,7 @@
         width: $apx-30;
         height: $apx-30;
 
-        @media screen and ( max-width: 768px ) {
+        @media screen and ( max-width: 1024px ) {
 
           width: $apx-l-40;
           height: $apx-l-40;

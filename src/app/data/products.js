@@ -1,7 +1,7 @@
 
 
 export const categorizedProducts = {
-  'Деревянные двери': [
+  'derevyannye-dveri': [
  
     {
       id: 2,
@@ -11,7 +11,7 @@ export const categorizedProducts = {
     },
    
   ],
-  'Комбинированные двери': [
+  'kombinirovannye-dveri': [
 
     {
 
@@ -151,7 +151,7 @@ export const categorizedProducts = {
 
   ],
 
-  'Стеклянные двери': [
+  'steklyannye-dveri': [
 
     {
 
@@ -163,7 +163,7 @@ export const categorizedProducts = {
 
   ],
 
-  'Форточки для бани и сауны': [
+  'fortochki': [
 
     {
 
@@ -199,7 +199,7 @@ export const categorizedProducts = {
 
   ],
 
-  'Абажуры для бани': [
+  'abazhury': [
 
     {
 
@@ -211,7 +211,7 @@ export const categorizedProducts = {
 
   ],
 
-  'Спортивный инвентарь': [
+  'sportinventar': [
 
     {
 
@@ -223,7 +223,7 @@ export const categorizedProducts = {
 
   ],
 
-  'Аксессуары для бани': [
+  'aksessuary': [
 
     {
 

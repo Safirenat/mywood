@@ -6,7 +6,7 @@
     margin-bottom: $apx-48;
     margin-left: $apx-115; 
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
         width: $apx-l-821;
 
@@ -24,7 +24,7 @@
         text-transform: uppercase;
         // white-space: nowrap;
 
-        @media screen and ( max-width: 768px ) {
+        @media screen and ( max-width: 1024px ) {
 
             font-size: $apx-l-20;
             font-weight: 500;
@@ -51,7 +51,7 @@
         line-height: 120%;
         color: #222222; 
 
-        @media screen and ( max-width: 768px ) {
+        @media screen and ( max-width: 1024px ) {
 
             font-size: $apx-l-16;
             font-weight: 500;

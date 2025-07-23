@@ -8,7 +8,7 @@
     // padding: 0 $apx-40;
     overflow: hidden;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
         padding: 0 $apx-20;
 
@@ -29,7 +29,7 @@
     width: 100%;
     gap: $apx-20;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
       // width: $apx-960;
       width: 100%;
@@ -56,7 +56,7 @@
     border: $apx-1 solid #e0e0e0;
     height: $apx-392;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
         // flex: 0 0 calc((100% - $apx-l-10));
         flex: 0 0 calc((100% - $apx-l-20) / 2);
@@ -86,7 +86,7 @@
     width: 100%;
     position: relative;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
       width: 200px;
 
@@ -99,7 +99,7 @@
     min-height: $apx-320;
     height: $apx-500;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
         // min-height: $apx-l-320;
         // height: $apx-l-380;
@@ -117,7 +117,7 @@
      
       height: $apx-380;
 
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
 
         height: $apx-l-370;
 
@@ -146,7 +146,7 @@
     line-height: 120%;
     color: #222222; 
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       display: none;
 
@@ -221,7 +221,7 @@
       top: $apx-480;
       left: $apx-46; 
       
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
 
         top: $apx-l-380;
         left: $apx-l-86;
@@ -242,7 +242,7 @@
       top: $apx-480;
       left: $apx-398;
       
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
 
         top: $apx-l-380;
         left: $apx-l-396;
@@ -260,7 +260,7 @@
 
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
 
     // .slide {
 
@@ -288,7 +288,7 @@
     margin-top: $apx-20;
     z-index: 3;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
 
       top: $apx-l-370;
       left: $apx-l-199;

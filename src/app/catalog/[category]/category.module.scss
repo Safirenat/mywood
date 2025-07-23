@@ -1,42 +1,39 @@
 @use '../../styles/adaptivepx.scss' as *;
 
-
-.test2{
+.test2 {
   background: #fff;
-
-  h1{
-
-  margin-left: 500px;
-  
-}
-}
-.test{
-
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin: 20px;
   
 
-  
-
-img{
-  width: 250px;
-  height: 300px;
+  h1 {
+    margin-left: $apx-500;
+    font-size: $apx-50;
+    
+  }
 }
+
+.test {
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: $apx-20;
+  margin: $apx-20;
+  font-size: $apx-20;
+
+  img {
+    width: $apx-250;
+    height: $apx-300;
+
+  }
 }
 
 .backButton {
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
+  margin-top: $apx-20;
+  margin-left: $apx-20;
+  margin-bottom: $apx-20;
+  padding: $apx-10 $apx-20;
+  font-size: $apx-16;
   background-color: #f2f2f2;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: $apx-6;
   cursor: pointer;
 
   &:hover {
@@ -45,3 +42,105 @@ img{
 }
 
 
+@media screen and (max-width: 1024px) {
+  .test2 {
+    background: #fff;
+
+    h1 {
+      margin-left: $apx-l-120;
+      font-size: $apx-l-40;
+
+    }
+  }
+
+  .test {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $apx-l-20;
+    margin: $apx-l-20;
+    font-size: $apx-l-18;
+
+    img {
+      width: $apx-l-150;
+      height: $apx-l-200;
+    }
+  }
+
+  .backButton {
+    margin-top: $apx-l-20;
+    margin-left: $apx-l-20;
+    margin-bottom: $apx-l-20;
+    padding: $apx-l-10 $apx-l-20;
+    font-size: $apx-l-16;
+    border-radius: $apx-l-6;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+}
+
+
+@media screen and (max-width: 475px) {
+
+  .cartWrapper{
+
+  }
+
+  .test2 {
+    background: #fff;
+    // min-width: 900px;
+    // display: flex;
+
+    h1 {
+      margin-left: $apx-m-20;
+      font-size: $apx-m-16;
+      // white-space: nowrap;
+
+
+    }
+  }
+
+  .test {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content:space-between;
+    gap: $apx-m-20;
+    margin: $apx-m-20;
+    font-size: $apx-m-8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    img {
+      width: $apx-m-50;
+      height: $apx-m-100;
+    }
+  }
+
+  .backButton {
+    margin-top: $apx-m-20;
+    margin-left: $apx-m-20;
+    margin-bottom: $apx-m-20;
+    padding: $apx-m-10 $apx-m-20;
+    font-size: $apx-m-16;
+    border-radius: $apx-m-6;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+
+  .wrapper{
+  }
+}

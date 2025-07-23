@@ -7,7 +7,7 @@
   
   .img{
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       height: $apx-l-320;
 
@@ -25,7 +25,7 @@
       height: $apx-320;
       border-radius: $apx-10;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         height: $apx-l-320;
         max-width: $apx-l-536;
@@ -51,7 +51,7 @@
     left: $apx-30;
     bottom: $apx-30;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       left: $apx-l-30;
       bottom: $apx-l-30;
@@ -82,7 +82,7 @@
       max-width: $apx-146;
 
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         max-width: $apx-l-146;
 
@@ -113,7 +113,7 @@
       line-height: 100%;
       color: #FAFAF2;
 
-      @media screen and ( max-width: 768px ) {
+      @media screen and ( max-width: 1024px ) {
 
         font-size: $apx-l-22;
         line-height: 80%;

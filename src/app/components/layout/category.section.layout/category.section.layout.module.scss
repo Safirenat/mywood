@@ -16,7 +16,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: $apx-20;
 
-  @media screen and ( max-width: 768px ) {
+  @media screen and ( max-width: 1024px ) {
 
     grid-template-columns: 1fr 1fr;
     gap: $apx-l-20;
@@ -41,7 +41,7 @@
   margin-bottom: $apx-40;
   margin-left: $apx-115;
 
-  @media screen and ( max-width: 768px ) {
+  @media screen and ( max-width: 1024px ) {
 
     margin-left: $apx-l-60;
     margin-right: $apx-l-30;
@@ -68,7 +68,7 @@
     font-weight: 400;
     line-height: 100%;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       padding: $apx-l-16 $apx-l-81;
       border-radius: $apx-l-6;
@@ -98,7 +98,7 @@
   font-weight: 500; 
   line-height: 100%;
 
-  @media screen and ( max-width: 768px ) {
+  @media screen and ( max-width: 1024px ) {
 
     font-size: $apx-l-36;
 
@@ -115,7 +115,7 @@
     color: #CD9872;
     margin-left: $apx-100;
 
-    @media screen and ( max-width: 768px ) {
+    @media screen and ( max-width: 1024px ) {
 
       font-size: $apx-l-36;
       margin-left: $apx-l-39;

@@ -11,49 +11,49 @@ const items = [
 
     title: "Деревянные двери",
     image: "/img/combo.jpg",
-    link: "/catalog/Деревянные%20двери"
+    link: "/catalog/derevyannye-dveri"
 
   },
   {
 
     title: "Комбинированные двери",
     image: "/img/combo.jpg",
-    link: "/catalog/Комбинированные%20двери"
+    link: "/catalog/kombinirovannye-dveri"
 
   },
   {
 
     title: "Стеклянные двери",
     image: "/img/steklo.jpg",
-    link: "/catalog/Стеклянные%20двери"
+    link: "/catalog/steklyannye-dveri"
 
   },
   {
 
     title: "Абажуры для бани",
     image: "/img/bg-home-section.png",
-    link: "/catalog/Абажуры%20для%20бани"
+    link: "/catalog/abazhury"
 
   },
   {
 
     title: "Форточки для бани и сауны",
     image: "/img/bg-home-section.png",
-    link: "/catalog/Форточки%20для%20бани%20и%20сауны"
+    link: "/catalog/fortochki"
 
   },
   {
 
     title: "Спортивный инвентарь",
     image: "/img/bg-home-section.png",
-    link: "/catalog/Спортивный%20инвентарь"
+    link: "/catalog/sportinventar"
 
   },
   {
 
     title: "Аксессуары для бани",
     image: "/img/bg-home-section.png",
-    link: "/catalog/Аксессуары%20для%20бани"
+    link: "/catalog/aksessuary"
     
   }
 
