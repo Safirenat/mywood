@@ -10,8 +10,7 @@ export function generateStaticParams() {
 
   return categories.map(category => ({
     
-    // category: encodeURIComponent(category),
-     category,
+    category: encodeURIComponent(category),
 
   }))
 }
