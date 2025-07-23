@@ -2,36 +2,237 @@
 
 export const categorizedProducts = {
   'Деревянные двери': [
-    {
-      id: 1,
-      title: 'Деревянная дверь «Классика»',
-      image: '/img/derevo.jpg',
-    },
+ 
     {
       id: 2,
-      title: 'Деревянная дверь «"Элит"»',
-      image: '/img/derevo.jpg',
+      title: 'Дверь для бани деревянная с клином',
+      image: '/img/derevo/dverDlyaBaniDerevyannayaSKlinom.webp',
 
     },
-    {
-      id: 3,
-      title: 'Деревянная дверь «"Элит2"»',
-      image: '/img/derevo.jpg',
-
-    },
+   
   ],
   'Комбинированные двери': [
+
     {
+
       id: 3,
-      title: 'Комбинированная дверь «Модерн»',
-      image: '/img/derevo.jpg',
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Тропический закат"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyTropicheskiyZakat.jpg',
+
     },
-  ],
-  'Стеклянные двери': [
+
     {
+
       id: 4,
-      title: 'Стеклянная дверь «Люкс»',
-      image: '/img/derevo.jpg',
+      title: 'Дверь для бани деревянная штурвал со стеклянной вставкой "Парус"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaShturvalSoSteklyannoyVstavkoyParus.jpg',
+
     },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная с 8-ми угольной стеклянной вставкой с сюжетом',
+      image: '/img/combo/dverDlyaBaniDerevyannayaS8MiUgolnoySteklyannoyVstavkoySSyuzhetom.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани/сауны липа 1842х722 Элит Люкс "Горы" с вентиляцией',
+      image: '/img/combo/dverDlyaBaniSaunyLipaElitLyuksGorySVentilyatsiey.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани/сауны липа 1842х722 Элит "Мишки" с вентиляцией',
+      image: '/img/combo/dverDlyaBaniSaunyLipa1842h722ElitMishkiSVentilyatsiey.png',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная "Штурвал с иллюминатором"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaShturvalSIllyuminatorom.png',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани/сауны липа 1842х722 Элит Люкс "Море" с вентиляцией',
+      image: '/img/combo/dverDlyaBaniSaunyLipaElitLyuksMoreSVentilyatsiey.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани/сауны липа 1842х722 Элит Люкс "Турция" с вентиляцией',
+      image: '/img/combo/dverDlyaBaniSaunyLipaElitLyuksTurtsiyaSVentilyatsiey.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Цветы у воды"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyTsvetyUVody.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Горное отражение"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyGornoeOtrazhenie.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Парус"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyParus.jpg',
+
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Летят утки"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyLetyatUtki.jpg',
+      
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Летний луг"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyLetniyLug.jpg',
+      
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Золотой мостик"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyZolotoyMostik.jpg',
+      
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Деревенский двор"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyDerevenskiyDvor.jpg',
+      
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Горное озеро"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyGornoeOzero.jpg',
+      
+    },
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Альпийский берег"',
+      image: '/img/combo/dverDlyaBaniDerevyannayaSoSteklyannoyVstavkoyAlpiyskiyBereg.jpg',
+      
+    },
+
   ],
+
+  'Стеклянные двери': [
+
+    {
+
+      id: 4,
+      title: 'Дверь для бани деревянная со стеклянной вставкой "Цветы у воды"',
+      image: '/img/combo/comboDoorFlowersByTheWater.jpg',
+
+    },
+
+  ],
+
+  'Форточки для бани и сауны': [
+
+    {
+
+      id: 4,
+      title: 'Форточка для бани "Зима" со стеклопакетом',
+      image: '/img/fortochki/fortochkiZima.jpg',
+      
+    },
+
+    {
+
+      id: 4,
+      title: 'Форточка для бани "Осень" со стеклопакетом',
+      image: '/img/fortochki/fortochkiOysen.jpg',
+      
+    },
+    
+    {
+
+      id: 4,
+      title: 'Форточка для бани со стеклопакетом',
+      image: '/img/fortochki/fortochkiZatemnennyye.jpg',
+      
+    },
+    
+    {
+
+      id: 4,
+      title: 'Форточка для бани со сткелом 8мм матовая',
+      image: '/img/fortochki/fortochkiMatovyye.jpg',
+      
+    },
+
+  ],
+
+  'Абажуры для бани': [
+
+    {
+
+      id: 4,
+      title: 'Форточка для бани "Зима" со стеклопакетом',
+      image: '/img/fortochki/fortochkiZima.jpg',
+      
+    },
+
+  ],
+
+  'Спортивный инвентарь': [
+
+    {
+
+      id: 4,
+      title: 'Форточка для бани "Зима" со стеклопакетом',
+      image: '/img/fortochki/fortochkiZima.jpg',
+      
+    },
+
+  ],
+
+  'Аксессуары для бани': [
+
+    {
+
+      id: 4,
+      title: 'Форточка для бани "Зима" со стеклопакетом',
+      image: '/img/fortochki/fortochkiZima.jpg',
+      
+    },
+
+  ],
+
 }

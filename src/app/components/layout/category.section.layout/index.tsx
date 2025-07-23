@@ -32,28 +32,28 @@ const items = [
 
     title: "Абажуры для бани",
     image: "/img/bg-home-section.png",
-    link: "#"
+    link: "/catalog/Абажуры%20для%20бани"
 
   },
   {
 
     title: "Форточки для бани и сауны",
     image: "/img/bg-home-section.png",
-    link: "#"
+    link: "/catalog/Форточки%20для%20бани%20и%20сауны"
 
   },
   {
 
     title: "Спортивный инвентарь",
     image: "/img/bg-home-section.png",
-    link: "#"
+    link: "/catalog/Спортивный%20инвентарь"
 
   },
   {
 
     title: "Аксессуары для бани",
     image: "/img/bg-home-section.png",
-    link: "#"
+    link: "/catalog/Аксессуары%20для%20бани"
     
   }
 
@@ -63,7 +63,7 @@ const CategorySectionLayout = () => {
 
   return (
 
-    <div className = { s.root }>
+    <div className = { s.root } id="categories">
 
       <SectionHeader
 
@@ -74,7 +74,7 @@ const CategorySectionLayout = () => {
       />
 
 
-      <div className = { s.items }>
+      <div className = { s.items } >
 
 
         { items.map((item, index) => (

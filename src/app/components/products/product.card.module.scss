@@ -1,8 +1,7 @@
 @use '../../styles/adaptivepx.scss' as *;
 
 .cartWrapper {
-  width: 325px;
-  height: 450px;
+  max-width: $apx-500;
 
   padding-top: $apx-15;
   padding-bottom: $apx-15;
@@ -10,5 +9,34 @@
   padding-right: $apx-30;
   border: 1px solid #7C7C63;
   border-radius: 8px;
+
+  .image_dveri {
+
+    min-width: $apx-443;
+    min-height: $apx-664;
+
+  }
+
+  .image_combo_dveri {
+
+    min-width: $apx-443;
+    min-height: $apx-664;
+
+  }
+
+  .image_fortochki {
+
+    min-width: $apx-350;
+    min-height: $apx-300;
+    
+  }
+
+
+  .image_abazhury {
+
+    min-width: $apx-350;
+    min-height: $apx-300;
+    
+  }
 
 }

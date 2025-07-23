@@ -3,6 +3,8 @@
 import { FC } from "react";
 import s from "./category.section.module.scss";
 import Image from "next/image";
+import Link from 'next/link';
+
 
 interface CategorySectionProps {
 
@@ -16,22 +18,26 @@ const CategorySection: FC<CategorySectionProps> = ({ title, image, link }) => {
 
   return (
 
-    <div className = { s.root }>
+    <Link href={link} className={s.linkWrapper}>
+      
+        <div className = { s.root } >
 
-      <div className = { s.img }>
+          <div className = { s.img }>
 
-        <img src = { image } alt = { title } />
+            <img src = { image } alt = { title } />
 
-      </div>
+          </div>
 
-      <div className = { s.text }>
+          <div className = { s.text }>
 
-        <div className = { s.title }>{ title} </div>
-        <a href = { link } className = { s.link }>подробнее →</a>
+            <div className = { s.title }>{ title} </div>
+            <span  className = { s.link }>подробнее →</span>
 
-      </div>
+          </div>
 
-    </div>
+        </div>
+        
+    </Link>
 
   );
 
