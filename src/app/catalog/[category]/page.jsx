@@ -15,8 +15,9 @@ export function generateStaticParams() {
   }))
 }
 
-const CategoryPage = ({ params }) => {
+const CategoryPage = async ({ params }) => {
   const decodedCategory = decodeURIComponent(params.category);
+  
   const products = categorizedProducts[decodedCategory] || []
 
   return (
@@ -33,8 +34,10 @@ const CategoryPage = ({ params }) => {
             <ProductCard key={idx} product={product} category={decodedCategory} />
           ))}
         </div>
+
       ) : (
         <p>Нет товаров в этой категории.</p>
+
       )}
     </div>
   )
