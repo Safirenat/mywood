@@ -14,7 +14,7 @@ export function generateStaticParams() {
 }
 
 const CategoryPage = ({ params }) => {
-  const decodedCategory = decodeURIComponent(params?.category || "");
+  const decodedCategory = decodeURIComponent(params.category);
   const products = categorizedProducts[decodedCategory] || []
 
   return (
