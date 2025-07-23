@@ -4,31 +4,30 @@ import s from "./category.module.scss";
 import Link from 'next/link';
 
 
-// Статическая генерация всех возможных категорий
+// Обязательно: генерация статических путей для всех категорий
 export function generateStaticParams() {
-  const categories = Object.keys(categorizedProducts)
+  const categories = Object.keys(categorizedProducts);
 
-  return categories.map(category => ({
-    
+  return categories.map((category) => ({
     category: encodeURIComponent(category),
-
-  }))
+  }));
 }
 
+// Главный компонент страницы категории
 const CategoryPage = ({ params }) => {
   const decodedCategory = decodeURIComponent(params.category);
-  const products = categorizedProducts[decodedCategory] || []
+  const products = categorizedProducts[decodedCategory] || [];
 
   return (
-    <div >
-
+    <div className={s.wrapper}>
       <Link href="/#categories">
         <button className={s.backButton}>← Назад к категориям</button>
       </Link>
-      <h1 >Товары: {decodedCategory}</h1>
+
+      <h1 className={s.title}>Товары: {decodedCategory}</h1>
 
       {products.length > 0 ? (
-        <div className = { s.test }>
+        <div className={s.productsGrid}>
           {products.map((product, idx) => (
             <ProductCard key={idx} product={product} category={decodedCategory} />
           ))}
@@ -37,8 +36,7 @@ const CategoryPage = ({ params }) => {
         <p>Нет товаров в этой категории.</p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default CategoryPage
-
+export default CategoryPage;
