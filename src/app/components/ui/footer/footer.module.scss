@@ -18,9 +18,11 @@
   }
 
   @media screen and ( max-width: 475px ) {
+    flex-direction: column;
 
     height: $apx-m-176;
     column-gap: $apx-m-15;
+    row-gap: $apx-m-15;
 
   }
 
@@ -49,10 +51,21 @@
 
     display: flex;
     flex-direction: column;
+    margin-right: $apx-600;
+
+    @media screen and ( max-width: 1024px ) {
+      margin-right: $apx-l-10;
+
+      }
+    @media screen and ( max-width: 475px ) {
+      margin-right: $apx-m-10;
+
+      }
 
     .logo{
 
       margin-right: $apx-186;
+      
 
       svg{
 
@@ -113,6 +126,7 @@
     flex-direction: column;
     row-gap: $apx-10;
     margin-right: $apx-114;
+    // min-width: $apx-600;
 
     span{
       
