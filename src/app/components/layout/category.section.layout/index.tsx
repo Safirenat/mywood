@@ -1,6 +1,6 @@
 'use client'
 
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import s from "./category.section.layout.module.scss";
 import CategorySection from "../../sections/category.section";
 import { SectionHeader } from "../../ui/section.header";
@@ -60,6 +60,15 @@ const items = [
 ];
 
 const CategorySectionLayout = () => {
+
+  // ⬇️ очищаем #categories после перехода
+  useEffect(() => {
+    if (window.location.hash === '#categories') {
+      setTimeout(() => {
+        history.replaceState(null, '', window.location.pathname);
+      }, 400); // немного подождать, чтобы скролл успел выполниться
+    }
+  }, []);
 
   return (
 
