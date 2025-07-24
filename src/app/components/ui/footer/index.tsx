@@ -16,7 +16,7 @@ const Footer: FC = () => {
       <div className = { s.logoWrap}>
 
         <div className = { s.logo }><Logo/></div>
-        <span>© 2024. Все права защищены</span>
+        <span>© 2025. Все права защищены</span>
 
       </div>
 

@@ -56,7 +56,7 @@ const Header: FC = () => {
 
         <div className = { s.searchWrap }>
 
-          <input className = { s.search } placeholder = "Найти на сайте"/>
+          <input className = { s.search } placeholder = "" disabled/>
 
           <div className = { s.iconsWrap }>
 
