@@ -100,7 +100,6 @@
     h1 {
       margin-left: $apx-m-20;
       font-size: $apx-m-16;
-      // white-space: nowrap;
 
 
     }
@@ -109,11 +108,7 @@
   .test {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content:space-between;
-    gap: $apx-m-20;
+    gap: $apx-m-8;
     margin: $apx-m-20;
     margin-left: $apx-m-8;
     margin-right: $apx-m-8;

@@ -21,41 +21,41 @@ const items = [
     link: "/catalog/kombinirovannye-dveri"
 
   },
-  {
+  // {
 
-    title: "Стеклянные двери",
-    image: "/img/steklo.jpg",
-    link: "/catalog/steklyannye-dveri"
+  //   title: "Стеклянные двери",
+  //   image: "/img/steklo.jpg",
+  //   link: "/catalog/steklyannye-dveri"
 
-  },
-  {
+  // },
+  // {
 
-    title: "Абажуры для бани",
-    image: "/img/bg-home-section.png",
-    link: "/catalog/abazhury"
+  //   title: "Абажуры для бани",
+  //   image: "/img/bg-home-section.png",
+  //   link: "/catalog/abazhury"
 
-  },
-  {
+  // },
+  // {
 
-    title: "Форточки для бани и сауны",
-    image: "/img/bg-home-section.png",
-    link: "/catalog/fortochki"
+  //   title: "Форточки для бани и сауны",
+  //   image: "/img/bg-home-section.png",
+  //   link: "/catalog/fortochki"
 
-  },
-  {
+  // },
+  // {
 
-    title: "Спортивный инвентарь",
-    image: "/img/bg-home-section.png",
-    link: "/catalog/sportinventar"
+  //   title: "Спортивный инвентарь",
+  //   image: "/img/bg-home-section.png",
+  //   link: "/catalog/sportinventar"
 
-  },
-  {
+  // },
+  // {
 
-    title: "Аксессуары для бани",
-    image: "/img/bg-home-section.png",
-    link: "/catalog/aksessuary"
+  //   title: "Аксессуары для бани",
+  //   image: "/img/bg-home-section.png",
+  //   link: "/catalog/aksessuary"
     
-  }
+  // }
 
 ];
 
