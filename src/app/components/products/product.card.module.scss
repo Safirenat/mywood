@@ -15,25 +15,39 @@
 
   cursor: pointer;
 
+
+
   &:hover{
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     transform: translateY(-4px);
     
   }
 
+    &:last-child{
+
+        .image_dveri {
+
+          min-height: $apx-700;
+          padding-bottom: 100px;
+
+
+     
+        }
+      }
+
 }
 
   .image_dveri {
 
-    min-width: $apx-443;
-    min-height: $apx-664;
+    min-width: 100%;
+    min-height: $apx-700;
 
   }
 
   .image_combo_dveri {
 
-    min-width: $apx-343;
-    min-height: $apx-564;
+    min-width: 100%;
+    min-height: $apx-670;
     
 
   }
@@ -65,19 +79,30 @@
   border: 1px solid #7C7C63;
   border-radius: 8px;
 
+      &:last-child{
+
+        .image_dveri {
+
+          min-height: $apx-l-450;
+
+
+     
+        }
+      }
+
 }
 
   .image_dveri {
 
-    min-width: $apx-l-443;
-    min-height: $apx-l-664;
+    min-width:100%;
+    min-height: $apx-l-500;
 
   }
 
   .image_combo_dveri {
 
-    min-width: $apx-l-243;
-    min-height: $apx-l-364;
+    min-width: 100%;
+    min-height: $apx-l-510;
 
   }
 
@@ -102,12 +127,12 @@
   @media screen and ( max-width: 475px ) {
 
     .cartWrapper {
-      max-width: $apx-m-140;
+      max-width: $apx-m-340;
 
-      padding-top: $apx-m-15;
+      padding-top: $apx-m-10;
       padding-bottom: $apx-m-15;
-      padding-left: $apx-m-30;
-      padding-right: $apx-m-30;
+      padding-left: $apx-m-5;
+      padding-right: $apx-m-5;
       border: 1px solid #7C7C63;
       border-radius: 8px;
 
@@ -115,20 +140,30 @@
       flex-direction: column;
       align-items: center;
       row-gap: $apx-m-15;
+      &:last-child{
+
+        .image_dveri {
+
+          min-height: $apx-m-220;
+
+     
+        }
+      }
 
     }
 
   .image_dveri {
 
-    min-width: $apx-m-100;
-    min-height: $apx-m-200;
+    min-width: $apx-m-125;
+    min-height: $apx-m-290;
+    
 
   }
 
   .image_combo_dveri {
 
-    min-width: $apx-m-100;
-    min-height: $apx-m-165;
+    min-width: 100%;
+    min-height: $apx-m-290;
     
 
   }

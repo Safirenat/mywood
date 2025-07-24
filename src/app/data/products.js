@@ -3,10 +3,47 @@
 export const categorizedProducts = {
   'derevyannye-dveri': [
  
+    
+    {
+      id: 2,
+      title: 'Дверь для бани «Штурвал Эконом» ',
+      image: '/img/derevo/dverDlyaBaniShturvalEkonom.png',
+
+    },
+    {
+      id: 2,
+      title: 'Дверь для бани вагонка без сюжета',
+      image: '/img/derevo/dverDlyaBaniVagonkaBezSyuzheta.png',
+
+    },
+    {
+      id: 2,
+      title: 'Дверь для бани «Вагонка с легким паром» вставка(50х50)',
+      image: '/img/derevo/dverDlyaBaniVagonkaSLegkimParomVstavka50x50.png',
+
+    },
+    {
+      id: 2,
+      title: 'Дверь для бани «Вагонка с легким паром» вставка(40х60)',
+      image: '/img/derevo/dverDlyaBaniVagonkaSLegkimParomVstavka40x60.png',
+
+    },
+    {
+      id: 2,
+      title: 'Дверь для бани «Вагонка с легким паром» вставка(20х60)',
+      image: '/img/derevo/dverDlyaBaniVagonkaSLegkimParomVstavka20x60.png',
+
+    },
+    {
+      id: 2,
+      title: 'Дверь для бани «Вагонка с легким паром» вставка(20х50)',
+      image: '/img/derevo/dverDlyaBaniVagonkaSLegkimParomVstavka20x50.png',
+
+    },
     {
       id: 2,
       title: 'Дверь для бани деревянная с клином',
-      image: '/img/derevo/dverDlyaBaniDerevyannayaSKlinom.webp',
+      image: '/img/derevo/dverDlyaBaniDerevyannayaSKlinom.png',
 
     },
    
