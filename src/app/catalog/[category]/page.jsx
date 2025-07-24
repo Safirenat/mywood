@@ -14,7 +14,7 @@ const categoryNames = {
 };
 
 // Статическая генерация путей
-export const teStaticParams = () => [
+export const generateStaticParams  = () => [
   { category: 'derevyannye-dveri' },
   { category: 'kombinirovannye-dveri' },
   { category: 'steklyannye-dveri' },
