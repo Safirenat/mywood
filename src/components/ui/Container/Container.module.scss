@@ -1,0 +1,11 @@
+@import "../../../styles//adaptive-px.scss";
+
+.container {
+  width: 100%;
+  max-width: $apx-1200;
+  margin: 0 auto;
+  padding-left: $apx-16;
+  padding-right: $apx-16;
+
+
+}

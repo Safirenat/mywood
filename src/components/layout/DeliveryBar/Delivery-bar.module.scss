@@ -1,0 +1,33 @@
+@import "../../../styles/adaptive-px.scss";
+
+.bar {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: $apx-12;
+  padding-bottom: $apx-12;
+}
+
+.inner {
+  max-width: $apx-1200;
+  margin: 0 auto;
+  padding: 0 $apx-16;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: $apx-4;
+}
+
+.label {
+  font-size: $apx-12;
+  letter-spacing: 0.06em;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+.city {
+  font-size: $apx-12;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #4a2f11;
+}
