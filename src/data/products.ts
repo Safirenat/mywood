@@ -76,5 +76,4 @@ export const products: Product[] = [
     hasDiscount: false,
     category: "headrest",
   },
-  // можно добавить ещё товары по аналогии
 ];

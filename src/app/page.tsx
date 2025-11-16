@@ -10,8 +10,8 @@ export default function HomePage() {
       {/* <Container> */}
         <HeroSlider />
         <CategoryCircles />
-        <ProductSection title="новинки" mode="new" />
         <ProductSection title="хиты продаж" mode="hits" />
+        <ProductSection title="новинки" mode="new" />
       {/* </Container> */}
     </>
   );
