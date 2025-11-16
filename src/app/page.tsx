@@ -1,6 +1,8 @@
 import Container from "../components/ui/Container/Container";
 import HeroSlider from "../components/sections/HeroSlider/HeroSlider";
 import CategoryCircles from "../components/sections/CategoryCircles/CategoryCircles";
+import ProductSection from "../components/sections/ProductSection/ProductSection";
+
 
 export default function HomePage() {
   return (
@@ -8,6 +10,8 @@ export default function HomePage() {
       {/* <Container> */}
         <HeroSlider />
         <CategoryCircles />
+        <ProductSection title="новинки" mode="new" />
+        <ProductSection title="хиты продаж" mode="hits" />
       {/* </Container> */}
     </>
   );

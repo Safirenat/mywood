@@ -1,0 +1,95 @@
+@use "../../../styles/adaptive-px.scss" as *;
+
+.Card {
+  width: $apx-260;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: $apx-24;
+}
+
+.ImageWrapper {
+  position: relative;
+  width: 100%;
+  background: #f5efe7;
+}
+
+.Image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Бейджи ХИТ / % в левом верхнем углу */
+.Badges {
+  position: absolute;
+  top: $apx-8;
+  left: $apx-8;
+  display: flex;
+  flex-direction: column;
+}
+
+.Badge {
+  font-size: $apx-12;
+  font-weight: 600;
+  padding: $apx-4 $apx-6;
+  text-transform: uppercase;
+}
+
+.BadgeHit {
+  background-color: #ff7a1a;
+  color: #ffffff;
+}
+
+.BadgeDiscount {
+  background-color: #fff600;
+  color: #5b3510;
+}
+
+/* Плашка с размером */
+.SizePill {
+  margin-top: $apx-12;
+  margin-bottom: $apx-12;
+  padding: $apx-4 $apx-16;
+  border-radius: 999px;
+  border: 1px solid #5b3510;
+  font-size: $apx-12;
+  color: #5b3510;
+}
+
+/* Тексты */
+.Title {
+  font-size: $apx-14;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #4a2f11;
+  text-transform: uppercase;
+  margin-bottom: $apx-4;
+}
+
+.Series {
+  font-size: $apx-12;
+  text-transform: uppercase;
+  color: #8a6b3b;
+  margin-bottom: $apx-8;
+}
+
+/* Цены */
+.PriceRow {
+  display: flex;
+  gap: $apx-8;
+  align-items: baseline;
+}
+
+.OldPrice {
+  font-size: $apx-12;
+  color: #b0b0b0;
+  text-decoration: line-through;
+}
+
+.Price {
+  font-size: $apx-14;
+  font-weight: 600;
+  color: #000000;
+}

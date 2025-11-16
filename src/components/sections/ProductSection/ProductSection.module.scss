@@ -1,0 +1,27 @@
+@use "../../../styles/adaptive-px.scss" as *;
+
+.Section {
+  padding-top: $apx-40;
+  padding-bottom: $apx-40;
+  background: #ffffff;
+}
+
+.Inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $apx-20;
+}
+
+.Title {
+  font-size: $apx-28;
+  font-weight: 600;
+  color: #4a2f11;
+  margin-bottom: $apx-24;
+  text-transform: lowercase;
+}
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $apx-32;
+}
