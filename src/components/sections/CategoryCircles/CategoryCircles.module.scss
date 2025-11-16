@@ -7,9 +7,9 @@
 }
 
 .Inner {
-  max-width: 1200px;
+  max-width: $apx-1200;
   margin: 0 auto;
-  padding: 0 $apx-20;
+  padding: 0 $apx-20; 
 
   display: flex;
   justify-content: space-between;
@@ -25,6 +25,7 @@
 .Item {
   text-align: center;
   min-width: $apx-110;
+  cursor: pointer;
 
   @media (max-width: 900px) {
     min-width: $apx-100;

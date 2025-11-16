@@ -35,7 +35,7 @@ const categories = [
   {
     id: 7,
     title: "скидки",
-    image: "/sale.png",
+    image: "/CategoryCircles/sale.svg",
   },
 ];
 
