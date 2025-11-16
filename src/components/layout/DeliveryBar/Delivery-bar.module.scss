@@ -1,8 +1,7 @@
-@import "../../../styles/adaptive-px.scss";
+@use "../../../styles/adaptive-px.scss" as *;
 
 .bar {
   background-color: #ffffff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   padding-top: $apx-12;
   padding-bottom: $apx-12;
 }

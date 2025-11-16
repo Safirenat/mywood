@@ -1,0 +1,68 @@
+@use "../../../styles/adaptive-px.scss" as *;
+
+.Hero {
+  background-color: #ffffff;
+}
+
+/* Обёртка слайда — на всю ширину окна */
+.SlideWrapper {
+  position: relative;
+  width: 100%;
+  // max-width: $apx-1920;
+  height: $apx-640;
+  overflow: hidden;
+}
+
+/* Фон-картинка */
+.Background {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Контент поверх картинки (только кнопка) */
+.Content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Кнопка */
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $apx-12 $apx-32;
+  border-radius: $apx-4;
+  border: none;
+  background-color: #ff7a1a;
+  color: #ffffff;
+  font-size: $apx-14;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+/* Пагинация-точки под слайдом */
+.Dots {
+  margin-top: $apx-16;
+  margin-bottom: $apx-16;
+  display: flex;
+  justify-content: center;
+  gap: $apx-8;
+}
+
+.Dot {
+  width: $apx-10;
+  height: $apx-10;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.DotActive {
+  background-color: rgba(0, 0, 0, 0.35);
+}

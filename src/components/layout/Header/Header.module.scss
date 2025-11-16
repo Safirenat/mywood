@@ -1,4 +1,4 @@
-@import "../../../styles/adaptive-px.scss";
+@use "../../../styles/adaptive-px.scss" as *;
 
 .header {
   background-color: #ffffff;
@@ -6,8 +6,8 @@
 }
 
 .inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  // max-width: 1200px;
+  // margin: 0 auto;
   padding: 0 $apx-16;
 
   height: $apx-64;
