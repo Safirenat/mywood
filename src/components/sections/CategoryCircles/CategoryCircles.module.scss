@@ -1,0 +1,50 @@
+@use "../../../styles/adaptive-px" as *;
+
+.Categories {
+  padding-top: $apx-32;
+  padding-bottom: $apx-32;
+  background: #ffffff;
+}
+
+.Inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $apx-20;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $apx-20;
+
+  @media (max-width: 900px) {
+    overflow-x: auto;
+    padding-bottom: $apx-12;
+  }
+}
+
+.Item {
+  text-align: center;
+  min-width: $apx-110;
+
+  @media (max-width: 900px) {
+    min-width: $apx-100;
+  }
+}
+
+.Circle {
+  width: $apx-100;
+  height: $apx-100;
+  border-radius: 50%;
+  border: $apx-2 solid #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto $apx-8;
+  background: #fff;
+}
+
+.Label {
+  font-size: $apx-14;
+  color: #3a3a3a;
+  line-height: 1.3;
+}
