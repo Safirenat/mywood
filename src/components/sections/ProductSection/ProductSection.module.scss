@@ -23,7 +23,10 @@
 }
 
 .Grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $apx-32;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $apx-385);
+  // justify-content: center;
+  gap: $apx-74;
 }
+
+

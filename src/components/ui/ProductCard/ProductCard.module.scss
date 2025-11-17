@@ -1,7 +1,7 @@
 @use "../../../styles/adaptive-px.scss" as *;
 
+/* База для обеих вариаций */
 .Card {
-  width: $apx-260;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,16 +9,45 @@
   padding-bottom: $apx-24;
 }
 
+/* === Вариант для НОВИНОК / ХИТОВ (как в макете) === */
+.CardDefault {
+  width: $apx-385;
+
+  .ImageWrapper {
+    height: $apx-385; // квадратный бокс 385×385
+  }
+}
+
+/* === Вариант для стеклянных / с узором (под баннерами) === */
+/* здесь оставляем более компактную карточку */
+.CardCompact {
+  width: $apx-260;
+
+  .ImageWrapper {
+  
+    max-width: $apx-260;
+    // max-height: $apx-260;
+  }
+}
+
+/* --- Общее для всех карточек --- */
+
 .ImageWrapper {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
   position: relative;
   width: 100%;
-  background: #f5efe7;
+  background: #f1e9dd;
+
+  padding: $apx-20 $apx-46;
 }
 
 .Image {
   display: block;
-  width: 100%;
-  height: auto;
+  max-width: $apx-148;
+  max-height: $apx-345;
 }
 
 /* Бейджи ХИТ / % в левом верхнем углу */
@@ -92,18 +121,4 @@
   font-size: $apx-14;
   font-weight: 600;
   color: #000000;
-}
-
-.CardCompact {
-  width: $apx-220;
-  .SizePill {
-    margin-top: $apx-8;
-    margin-bottom: $apx-8;
-  }
-  .Title {
-    font-size: $apx-13;
-  }
-  .PriceRow {
-    margin-top: $apx-4;
-  }
 }

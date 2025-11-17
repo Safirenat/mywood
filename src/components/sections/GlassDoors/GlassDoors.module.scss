@@ -59,8 +59,10 @@
   column-gap: $apx-214;
 
   // margin-top: -$apx-80;
-  margin-top: -80px;
+  // margin-top: -80px;
+  margin-top: calc(#{$apx-80} * -1);
 
+  
   
   padding-top: $apx-60;
   padding-bottom: $apx-40;

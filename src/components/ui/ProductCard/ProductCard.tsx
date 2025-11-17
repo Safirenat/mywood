@@ -7,8 +7,10 @@ interface ProductCardProps {
   variant?: "default" | "compact";
 }
 
-// export default function ProductCard({ product }: ProductCardProps) {
-export default function ProductCard({ product, variant = "default" }: ProductCardProps) {
+export default function ProductCard({
+  product,
+  variant = "default",
+}: ProductCardProps) {
   const {
     image,
     title,
@@ -22,13 +24,12 @@ export default function ProductCard({ product, variant = "default" }: ProductCar
 
   const hasOldPrice = typeof oldPrice === "number";
 
+  const cardClassName = `${styles.Card} ${
+    variant === "compact" ? styles.CardCompact : styles.CardDefault
+  }`;
+
   return (
-    // <article className={styles.Card}>
-    <article
-      className={`${styles.Card} ${
-        variant === "compact" ? styles.CardCompact : ""
-      }`}
-    >
+    <article className={cardClassName}>
       <div className={styles.ImageWrapper}>
         {/* Бейджи ХИТ / % */}
         {(isHit || hasDiscount) && (
@@ -47,8 +48,8 @@ export default function ProductCard({ product, variant = "default" }: ProductCar
         <Image
           src={image}
           alt={title}
-          width={260}
-          height={300}
+          width={385}
+          height={385}
           className={styles.Image}
         />
       </div>
