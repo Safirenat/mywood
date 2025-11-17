@@ -4,10 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./HeroSlider.module.scss";
 
+type ButtonPosition = "center" | "left" | "right";
+type ButtonColor = "orange" | "green" | "brown";
+
 type Slide = {
   id: number;
   image: string;
   buttonText?: string;
+  buttonPosition: ButtonPosition;
+  buttonColor: ButtonColor;
 };
 
 const slides: Slide[] = [
@@ -15,16 +20,22 @@ const slides: Slide[] = [
     id: 1,
     image: "/slide_dveri.jpg",
     buttonText: "перейти к товарам",
+    buttonPosition: "center", 
+    buttonColor: "orange",
   },
   {
     id: 2,
     image: "/slide_mebel.jpg",
     buttonText: "перейти к товарам",
+    buttonPosition: "left",     
+    buttonColor: "brown",
   },
   {
     id: 3,
     image: "/slide_aksessuary.jpg",
     buttonText: "перейти к товарам",
+    buttonPosition: "right",  
+    buttonColor: "green",    
   },
 ];
 
@@ -45,13 +56,21 @@ export default function HeroSlider() {
         />
 
         {/* Кнопка поверх картинки */}
-        <div className={styles.Content}>
-          {activeSlide.buttonText && (
-            <button className={styles.Button}>
+        {activeSlide.buttonText && (
+          <div
+            className={`${styles.Content} ${
+              styles[`Content--${activeSlide.buttonPosition}`]
+            }`}
+          >
+            <button
+              className={`${styles.Button} ${
+                styles[`Button--${activeSlide.buttonColor}`]
+              }`}
+            >
               {activeSlide.buttonText}
             </button>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
       {/* Пагинация */}

@@ -8,7 +8,6 @@
 .SlideWrapper {
   position: relative;
   width: 100%;
-  // max-width: $apx-1920;
   height: $apx-640;
   overflow: hidden;
 }
@@ -19,30 +18,78 @@
   object-position: center;
 }
 
-/* Контент поверх картинки (только кнопка) */
+/* Базовый слой контента поверх картинки */
 .Content {
   position: absolute;
   inset: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  pointer-events: none; // чтобы клики шли только на кнопку
+}
+
+/* Позиции для разных слайдов */
+.Content--center {
+  justify-content: center;
+  padding-top: $apx-300;
+  padding-left: $apx-188;
+}
+
+.Content--left {
+  justify-content: flex-start;
+  padding-top: $apx-160;
+  padding-left: $apx-130;
+}
+
+.Content--right {
+  justify-content: flex-end;
+  padding-top: $apx-310;
+  padding-right: $apx-276;
 }
 
 /* Кнопка */
 .Button {
+  pointer-events: auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: $apx-12 $apx-32;
   border-radius: $apx-4;
   border: none;
-  background-color: #ff7a1a;
-  color: #ffffff;
   font-size: $apx-14;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+/* Цвета кнопок для разных слайдов */
+.Button--orange {
+  background-color: #F16901;
+  color: #532E03;
+
+  &:hover {
+    background-color: #e86b12;
+  }
+}
+
+.Button--green {
+  background-color: #0B5D02;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #176020;
+  }
+}
+
+.Button--brown {
+  background-color: #342009;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #342009d4;
+  }
 }
 
 /* Пагинация-точки под слайдом */
