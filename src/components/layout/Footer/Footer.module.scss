@@ -1,0 +1,145 @@
+@use "../../../styles/adaptive-px.scss" as *;
+
+.Footer {
+  width: 100%;
+  background-image: url("/footer/footer-bg.jpg");
+  background-size: cover;  
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: $apx-32;
+  padding-bottom: $apx-32;
+
+  font-size: $apx-14;
+  padding-left: $apx-50;
+  padding-right: $apx-50;
+  color: #ffffff;
+  
+}
+
+.Inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $apx-80;
+
+
+}
+
+/* ===== ЛЕВАЯ КОЛОНКА ===== */
+
+.Brand {
+  // flex: 0 0 auto;
+  // min-width: $apx-200;
+  margin-right: $apx-200;
+}
+
+.Logo {
+  font-size: $apx-24;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: $apx-20;
+}
+
+.Phone {
+  margin-bottom: $apx-20;
+}
+
+.SocialList {
+  display: flex;
+  flex-direction: column;
+  gap: $apx-8;
+}
+
+.SocialItem {
+  display: inline-flex;
+  align-items: center;
+  gap: $apx-8;
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.SocialIconWhatsapp,
+.SocialIconTelegram {
+  width: $apx-18;
+  height: $apx-18;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.SocialIconWhatsapp {
+  background-image: url("/icons/whatsapp.svg");
+}
+
+.SocialIconTelegram {
+  background-image: url("/icons/telegram.svg");
+}
+
+/* ===== СРЕДНИЕ КОЛОНКИ ===== */
+
+.Column {
+  // flex: 0 0 auto;
+  margin-right: $apx-200;
+
+}
+
+.ColumnTitle {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: $apx-16;
+}
+
+.LinkList {
+  display: flex;
+  flex-direction: column;
+  gap: $apx-8;
+}
+
+.Link {
+  color: #ffffff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.LinkMuted {
+  opacity: 0.8;
+}
+
+/* ===== ПРАВАЯ КОЛОНКА / QR ===== */
+
+.QrBlock {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: $apx-24;
+
+  @media (max-width: 900px) {
+    align-items: flex-start;
+  }
+}
+
+.QrWrapper {
+  text-align: right;
+
+  @media (max-width: 900px) {
+    text-align: left;
+  }
+}
+
+.QrCaption {
+  display: block;
+  margin-top: $apx-8;
+  font-size: $apx-10;
+}
+
+.HouseWrapper {
+  opacity: 0.9;
+}

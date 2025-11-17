@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 
 import Header from "../components/layout/Header/Header";
 import DeliveryBar from "../components/layout/DeliveryBar/DeliveryBar";
-// import Footer from "../components/layout/Footer/Footer";
+import Footer from "../components/layout/Footer/Footer";
 
 export const metadata = {
   title: "MYWOOD — двери и окна для бани",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <main>{children}</main>
 
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
