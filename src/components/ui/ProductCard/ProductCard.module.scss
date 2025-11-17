@@ -93,3 +93,17 @@
   font-weight: 600;
   color: #000000;
 }
+
+.CardCompact {
+  width: $apx-220;
+  .SizePill {
+    margin-top: $apx-8;
+    margin-bottom: $apx-8;
+  }
+  .Title {
+    font-size: $apx-13;
+  }
+  .PriceRow {
+    margin-top: $apx-4;
+  }
+}

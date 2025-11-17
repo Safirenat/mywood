@@ -1,0 +1,73 @@
+@import "../../../styles/adaptive-px.scss";
+
+.Section {
+  width: 100%;
+  padding-top: $apx-40;
+  padding-bottom: $apx-80;
+}
+
+.Inner {
+  padding: 0 $apx-120;
+
+  img {
+    width: 100%;
+  }
+}
+
+.Title {
+  font-size: $apx-32;
+  font-weight: 600;
+  color: #3a240f;
+  margin-bottom: $apx-32;
+  text-align: right;
+}
+
+/* --- Верхний баннер --- */
+.Top {
+  width: 100%;
+  border-radius: $apx-8;
+  overflow: hidden;
+  position: relative;
+
+  button {
+    position: absolute;
+    top: $apx-40;
+    right: $apx-40;
+    padding: $apx-16 $apx-40;
+
+    background: #ff7a1a;
+    color: #fff;
+    border: none;
+    border-radius: $apx-6;
+    font-size: $apx-18;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    &:hover {
+      background: #e86b12;
+    }
+  }
+}
+
+/* --- Нижние карточки --- */
+.Bottom {
+  display: flex;
+  justify-content: center;
+  column-gap: $apx-214;
+
+  margin-top: -80px;
+  padding-top: $apx-60;
+  padding-bottom: $apx-40;
+
+  background: #ffffff;
+  border-radius: 0 0 $apx-16 $apx-16;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+    row-gap: $apx-32;
+    margin-top: -40px;
+  }
+}

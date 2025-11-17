@@ -4,9 +4,11 @@ import type { Product } from "../../../data/products";
 
 interface ProductCardProps {
   product: Product;
+  variant?: "default" | "compact";
 }
 
-export default function ProductCard({ product }: ProductCardProps) {
+// export default function ProductCard({ product }: ProductCardProps) {
+export default function ProductCard({ product, variant = "default" }: ProductCardProps) {
   const {
     image,
     title,
@@ -21,7 +23,12 @@ export default function ProductCard({ product }: ProductCardProps) {
   const hasOldPrice = typeof oldPrice === "number";
 
   return (
-    <article className={styles.Card}>
+    // <article className={styles.Card}>
+    <article
+      className={`${styles.Card} ${
+        variant === "compact" ? styles.CardCompact : ""
+      }`}
+    >
       <div className={styles.ImageWrapper}>
         {/* Бейджи ХИТ / % */}
         {(isHit || hasDiscount) && (

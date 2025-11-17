@@ -18,9 +18,10 @@ export interface Product {
   isNew: boolean;       // новинка
   hasDiscount: boolean; // есть скидка (%)
   category: ProductCategory;
+  blocks?: Array<"hits" | "new" | "wood-doors" | "patterned" | "glass-doors">;
 }
 
-// временная "база данных" — потом можно будет заменить на API/Strapi
+// временная "база данных"
 export const products: Product[] = [
   {
     id: "door-1",
@@ -34,6 +35,7 @@ export const products: Product[] = [
     isNew: true,
     hasDiscount: true,
     category: "wood-door",
+    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
   },
   {
     id: "window-1",
@@ -47,6 +49,7 @@ export const products: Product[] = [
     isNew: false,
     hasDiscount: true,
     category: "window",
+    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
   },
   {
     id: "lounger-1",
@@ -61,6 +64,7 @@ export const products: Product[] = [
     isNew: true,
     hasDiscount: false,
     category: "lounger",
+    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
   },
   {
     id: "headrest-1",
