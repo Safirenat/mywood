@@ -61,7 +61,7 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   cursor: pointer;
-  transition: 0.25s;
+  // transition: 0.25s;
 }
 
 /* Цвета кнопок для разных слайдов */
@@ -71,6 +71,7 @@
 
   &:hover {
     background-color: #e86b12;
+    transition: background-color 0.2s ease;
   }
 }
 
