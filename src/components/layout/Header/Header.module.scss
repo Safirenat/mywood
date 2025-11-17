@@ -37,7 +37,8 @@
 /* Логотип */
 
 .logo {
-  
+
+  margin-left: $apx-138;
 
   img{
 
@@ -56,102 +57,26 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: $apx-16;
+  gap: 24px;
 }
 
 .iconButton {
-  width: $apx-24;
-  height: $apx-24;
-  padding: 0;
   background: none;
   border: none;
+  padding: 0;
   cursor: pointer;
-  position: relative;
-}
 
-/* Лупа */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.iconSearch {
-  &::before {
-    content: "";
-    position: absolute;
-    inset: $apx-4;
-    border-radius: 50%;
-    border: $apx-2 solid #4a2f11;
-  }
+  width: 24px;
+  height: 24px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: $apx-8;
-    height: $apx-2;
-    background-color: #4a2f11;
-    border-radius: $apx-2;
-    right: $apx-2;
-    bottom: $apx-4;
-    transform: rotate(45deg);
-    transform-origin: left center;
+  transition: opacity .2s ease;
+
+  &:hover {
+    opacity: 0.7;
   }
 }
 
-/* Человечек */
-
-.iconUser {
-  &::before {
-    /* голова */
-    content: "";
-    position: absolute;
-    top: $apx-2;
-    left: 50%;
-    transform: translateX(-50%);
-    width: $apx-12;
-    height: $apx-12;
-    border-radius: 50%;
-    border: $apx-2 solid #4a2f11;
-  }
-
-  &::after {
-    /* корпус */
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: $apx-2;
-    transform: translateX(-50%);
-    width: $apx-18;
-    height: $apx-10;
-    border-radius: $apx-10 $apx-10 0 0;
-    border: $apx-2 solid #4a2f11;
-    border-top: none;
-  }
-}
-
-/* Корзина */
-
-.iconCart {
-  &::before {
-    /* сам ящик */
-    content: "";
-    position: absolute;
-    left: $apx-3;
-    right: $apx-3;
-    top: $apx-7;
-    bottom: $apx-5;
-    border-radius: $apx-2;
-    border: $apx-2 solid #4a2f11;
-  }
-
-  &::after {
-    /* ручка + колёса */
-    content: "";
-    position: absolute;
-    left: $apx-5;
-    right: $apx-5;
-    top: $apx-4;
-    height: $apx-2;
-    border-radius: $apx-2;
-    background-color: #4a2f11;
-    box-shadow:
-      $apx-4 $apx-12 0 0 #4a2f11,
-      $apx-4 $apx-12 0 0 #4a2f11; // два кружка-колеса
-  }
-}

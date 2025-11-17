@@ -28,19 +28,34 @@ export default function Header() {
 
         {/* Иконки справа */}
         <div className={styles.actions}>
-          <button
-            className={`${styles.iconButton} ${styles.iconSearch}`}
-            aria-label="Поиск"
-          />
-          <button
-            className={`${styles.iconButton} ${styles.iconUser}`}
-            aria-label="Личный кабинет"
-          />
-          <button
-            className={`${styles.iconButton} ${styles.iconCart}`}
-            aria-label="Корзина"
-          />
+          <button className={styles.iconButton} aria-label="Поиск">
+            <Image
+              src="/header/search.svg"
+              alt="Поиск"
+              width={22}
+              height={22}
+            />
+          </button>
+
+          <button className={styles.iconButton} aria-label="Личный кабинет">
+            <Image
+              src="/header/user.svg"
+              alt="Личный кабинет"
+              width={22}
+              height={22}
+            />
+          </button>
+
+          <button className={styles.iconButton} aria-label="Корзина">
+            <Image
+              src="/header/cart.svg"
+              alt="Корзина"
+              width={22}
+              height={22}
+            />
+          </button>
         </div>
+
       </div>
     </header>
   );
