@@ -4,8 +4,8 @@
 .Card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items:end;
+  // text-align: center;
   padding-bottom: $apx-24;
 }
 
@@ -15,6 +15,14 @@
 
   .ImageWrapper {
     height: $apx-385; // квадратный бокс 385×385
+  }
+
+  .Title,
+  .Series,
+  .PriceRow {
+    text-align: right;
+    width: 100%;
+    align-items: center;
   }
 }
 
@@ -103,26 +111,30 @@
 
 /* Тексты */
 .Title {
+  max-width: $apx-239;
   font-size: $apx-14;
   line-height: 1.4;
   font-weight: 400;
   color: #4a2f11;
   text-transform: uppercase;
-  margin-bottom: $apx-4;
+  margin-bottom: $apx-30;
+  text-align: right;
 }
 
 .Series {
   font-size: $apx-12;
   text-transform: uppercase;
   color: #8a6b3b;
-  margin-bottom: $apx-8;
+  margin-bottom: $apx-30;
 }
 
 /* Цены */
 .PriceRow {
   display: flex;
+  justify-content: right;
   gap: $apx-8;
-  align-items: baseline;
+
+  
 }
 
 .OldPrice {
