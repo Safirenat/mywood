@@ -31,8 +31,8 @@ export default function ProductCard({
   return (
     <article className={cardClassName}>
       <div className={styles.ImageWrapper}>
-        {/* Бейджи ХИТ / % */}
-        {(isHit || hasDiscount) && (
+       {/* Бейджи только если variant = default */}
+        {variant === "default" && (isHit || hasDiscount) && (
           <div className={styles.Badges}>
             {isHit && (
               <div className={`${styles.Badge} ${styles.BadgeHit}`}>ХИТ</div>
@@ -44,6 +44,7 @@ export default function ProductCard({
             )}
           </div>
         )}
+
 
         <Image
           src={image}

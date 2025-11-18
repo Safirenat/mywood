@@ -55,9 +55,10 @@
 .Bottom {
   display: flex;
   justify-content: center;
-  column-gap: $apx-214;
+  column-gap: $apx-150;
 
-  margin-top: -80px;
+  // margin-top: -80px;
+  margin-top: calc(#{$apx-160} * -1);
   padding-top: $apx-60;
   padding-bottom: $apx-40;
 
