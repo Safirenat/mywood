@@ -28,6 +28,7 @@ export default function GlassDoors() {
               key={product.id}
               product={product}
               variant="compact"
+              bg="glass"
             />
           ))}
         </div>

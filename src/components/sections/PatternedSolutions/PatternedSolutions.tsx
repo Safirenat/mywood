@@ -28,6 +28,7 @@ export default function PatternedSolutions() {
               key={product.id}
               product={product}
               variant="compact"
+              bg="pattern"
             />
           ))}
         </div>

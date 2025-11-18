@@ -5,11 +5,13 @@ import type { Product } from "../../../data/products";
 interface ProductCardProps {
   product: Product;
   variant?: "default" | "compact";
+  bg?: "default" | "glass" | "pattern";
 }
 
 export default function ProductCard({
   product,
   variant = "default",
+  bg = "default",
 }: ProductCardProps) {
   const {
     image,
@@ -24,27 +26,25 @@ export default function ProductCard({
 
   const hasOldPrice = typeof oldPrice === "number";
 
-  const cardClassName = `${styles.Card} ${
-    variant === "compact" ? styles.CardCompact : styles.CardDefault
-  }`;
+  const cardClassName = `
+    ${styles.Card}
+    ${variant === "compact" ? styles.CardCompact : styles.CardDefault}
+    ${bg === "glass" ? styles.Glassg : ""}
+    ${bg === "pattern" ? styles.PatternBg : ""}
+  `;
 
   return (
     <article className={cardClassName}>
       <div className={styles.ImageWrapper}>
-       {/* Бейджи только если variant = default */}
+
         {variant === "default" && (isHit || hasDiscount) && (
           <div className={styles.Badges}>
-            {isHit && (
-              <div className={`${styles.Badge} ${styles.BadgeHit}`}>ХИТ</div>
-            )}
+            {isHit && <div className={`${styles.Badge} ${styles.BadgeHit}`}>ХИТ</div>}
             {hasDiscount && (
-              <div className={`${styles.Badge} ${styles.BadgeDiscount}`}>
-                %
-              </div>
+              <div className={`${styles.Badge} ${styles.BadgeDiscount}`}>%</div>
             )}
           </div>
         )}
-
 
         <Image
           src={image}
@@ -55,20 +55,11 @@ export default function ProductCard({
         />
       </div>
 
-      {/* Размер (овальная плашка) */}
-      {sizeLabel && (
-        <div className={styles.SizePill}>
-          <span>{sizeLabel}</span>
-        </div>
-      )}
+      {sizeLabel && <div className={styles.SizePill}><span>{sizeLabel}</span></div>}
 
-      {/* Название */}
       <h3 className={styles.Title}>{title}</h3>
-
-      {/* Серия */}
       <p className={styles.Series}>{series}</p>
 
-      {/* Цены */}
       <div className={styles.PriceRow}>
         {hasOldPrice && <span className={styles.OldPrice}>{oldPrice} ₽</span>}
         <span className={styles.Price}>{price} ₽</span>
@@ -76,3 +67,4 @@ export default function ProductCard({
     </article>
   );
 }
+
