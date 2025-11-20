@@ -168,7 +168,6 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
     },
   ],
 
-  // 🔸 Новая категория "комбинированные двери"
   "combo-door": [
     {
       id: "combo-1",
