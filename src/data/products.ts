@@ -3,21 +3,22 @@
 export type ProductCategory =
   | "wood-door"
   | "glass-door"
+  | "combo-door"   // 🔸 новая категория
   | "window"
   | "lounger"
   | "headrest"
   | "other";
 
 export interface Product {
-  id: string;         // ID товара
-  title: string;      // Название, напр. "ДВЕРЬ ДЛЯ БАНИ ..."
-  series: string;     // Серия, напр. 'СЕРИЯ "ЛЕТЯТ УТКИ"'
-  sizeLabel?: string; // Размер, напр. "1850/750"
-  image: string;      // Путь к картинке
-  price: number;      // Актуальная цена
-  oldPrice?: number;  // Старая цена (если есть скидка)
-  isHit: boolean;     // Хит продаж
-  isNew: boolean;     // Новинка
+  id: string;           // ID товара
+  title: string;        // Название, напр. "ДВЕРЬ ДЛЯ БАНИ ..."
+  series: string;       // Серия, напр. 'СЕРИЯ "ЛЕТЯТ УТКИ"'
+  sizeLabel?: string;   // Размер, напр. "1850/750"
+  image: string;        // Путь к картинке
+  price: number;        // Актуальная цена
+  oldPrice?: number;    // Старая цена (если есть скидка)
+  isHit: boolean;       // Хит продаж
+  isNew: boolean;       // Новинка
   hasDiscount: boolean; // Есть скидка (%)
   category: ProductCategory;
 }
@@ -164,6 +165,52 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       isNew: true,
       hasDiscount: false,
       category: "glass-door",
+    },
+  ],
+
+  // 🔸 Новая категория "комбинированные двери"
+  "combo-door": [
+    {
+      id: "combo-1",
+      title:
+        'ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ "Летний луг"',
+      series: 'СЕРИЯ "ЛЕТНИЙ ЛУГ"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar2.jpg",
+      price: 9999,
+      oldPrice: 13500,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "combo-door",
+    },
+    {
+      id: "combo-2",
+      title:
+        'ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ "Горное озеро"',
+      series: 'СЕРИЯ "ГОРНОЕ ОЗЕРО"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar.jpg",
+      price: 10490,
+      oldPrice: 13900,
+      isHit: false,
+      isNew: true,
+      hasDiscount: true,
+      category: "combo-door",
+    },
+    {
+      id: "combo-3",
+      title:
+        'ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ "Парус"',
+      series: 'СЕРИЯ "ПАРУС"',
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar2.jpg",
+      price: 9490,
+      oldPrice: 0,
+      isHit: true,
+      isNew: false,
+      hasDiscount: false,
+      category: "combo-door",
     },
   ],
 
