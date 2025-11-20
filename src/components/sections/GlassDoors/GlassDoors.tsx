@@ -1,10 +1,27 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./GlassDoors.module.scss";
 import ProductCard from "../../ui/ProductCard/ProductCard";
-import { products } from "../../../data/products";
+import { categorizedProducts } from "../../../data/products";
 
 export default function GlassDoors() {
-  const items = products.filter((p) => p.blocks?.includes("glass-doors"));
+  const allItems = categorizedProducts["glass-door"];
+  const [randomItems, setRandomItems] = useState<typeof allItems>([]);
+
+  useEffect(() => {
+    if (!allItems || allItems.length === 0) return;
+
+    const shuffled = [...allItems].sort(() => Math.random() - 0.5);
+    const selected = shuffled.slice(0, 4);
+
+    const timerId = window.setTimeout(() => {
+      setRandomItems(selected);
+    }, 0);
+
+    return () => window.clearTimeout(timerId);
+  }, [allItems]);
 
   return (
     <section className={styles.Section}>
@@ -18,12 +35,11 @@ export default function GlassDoors() {
             width={1200}
             height={500}
           />
-
           <button className={styles.Button}>перейти к товарам</button>
         </div>
 
         <div className={styles.Bottom}>
-          {items.map((product) => (
+          {randomItems.map((product) => (
             <ProductCard
               key={product.id}
               product={product}

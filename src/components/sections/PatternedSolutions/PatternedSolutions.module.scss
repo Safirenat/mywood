@@ -1,4 +1,4 @@
-@import "../../../styles/adaptive-px.scss";
+@use "../../../styles/adaptive-px.scss" as *;
 
 .Section {
   width: 100%;

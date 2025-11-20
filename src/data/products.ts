@@ -1,3 +1,5 @@
+// src/data/products.ts
+
 export type ProductCategory =
   | "wood-door"
   | "glass-door"
@@ -7,107 +9,229 @@ export type ProductCategory =
   | "other";
 
 export interface Product {
-  id: string;
-  title: string;        // ДВЕРЬ ДЛЯ БАНИ ...
-  series: string;       // СЕРИЯ "ЛЕТЯТ УТКИ"
-  sizeLabel?: string;   // 1850/750
-  image: string;        // путь к картинке
-  price: number;        // актуальная цена
-  oldPrice?: number;    // зачёркнутая цена (если есть скидка)
-  isHit: boolean;       // хит продаж
-  isNew: boolean;       // новинка
-  hasDiscount: boolean; // есть скидка (%)
+  id: string;         // ID товара
+  title: string;      // Название, напр. "ДВЕРЬ ДЛЯ БАНИ ..."
+  series: string;     // Серия, напр. 'СЕРИЯ "ЛЕТЯТ УТКИ"'
+  sizeLabel?: string; // Размер, напр. "1850/750"
+  image: string;      // Путь к картинке
+  price: number;      // Актуальная цена
+  oldPrice?: number;  // Старая цена (если есть скидка)
+  isHit: boolean;     // Хит продаж
+  isNew: boolean;     // Новинка
+  hasDiscount: boolean; // Есть скидка (%)
   category: ProductCategory;
-  blocks?: Array<"hits" | "new" | "wood-doors" | "patterned" | "glass-doors">;
 }
 
-// временная "база данных"
-export const products: Product[] = [
-  {
-    id: "door-1",
-    title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
-    series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-    sizeLabel: "1850/750",
-    image: "/products/test-tovar.jpg",
-    price: 6868,
-    oldPrice: 15000,
-    isHit: true,
-    isNew: true,
-    hasDiscount: true,
-    category: "wood-door",
-    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
-  },
-  {
-    id: "window-1",
-    title: "ФОРТОЧКА ДЛЯ БАНИ СО СТЕКЛОПАКЕТОМ",
-    series: 'СЕРИЯ "ОСЕНЬ"',
-    sizeLabel: "600/600",
-    image: "/products/test-tovar2.jpg",
-    price: 4349,
-    oldPrice: 9200,
-    isHit: true,
-    isNew: false,
-    hasDiscount: true,
-    category: "window",
-    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
-  },
-  {
-    id: "lounger-1",
-    title: "ШЕЗЛОНГ СКЛАДНОЙ ТКАНЕВЫЙ",
-    series: 'СЕРИЯ "Дачный отдых"',
-    // sizeLabel: undefined,
-    sizeLabel: "1850/750",
-    image: "/products/test-tovar2.jpg",
-    price: 2689,
-    oldPrice: undefined,
-    isHit: true,
-    isNew: true,
-    hasDiscount: false,
-    category: "lounger",
-    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
-  },
-  {
-    id: "headrest-1",
-    title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
-    series: "ЛИПА",
-    // sizeLabel: undefined,
-    sizeLabel: "1850/750",
-    image: "/products/test-tovar3.png",
-    price: 1322,
-    oldPrice: undefined,
-    isHit: true,
-    isNew: false,
-    hasDiscount: false,
-    category: "headrest",
-  },
-  {
-    id: "headrest-12",
-    title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
-    series: "ЛИПА",
-    // sizeLabel: undefined,
-    sizeLabel: "1850/750",
-    image: "/products/test-tovar4.png",
-    price: 1322,
-    oldPrice: undefined,
-    isHit: true,
-    isNew: false,
-    hasDiscount: false,
-    category: "lounger",
-    blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
-  },
-  // {
-  //   id: "headrest-1222",
-  //   title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
-  //   series: "ЛИПА",
-  //   // sizeLabel: undefined,
-  //   sizeLabel: "1850/750",
-  //   image: "/products/test-tovar5.png",
-  //   price: 1322,
-  //   oldPrice: undefined,
-  //   isHit: true,
-  //   isNew: false,
-  //   hasDiscount: false,
-  //   category: "lounger",
-  //   blocks: ["hits", "new", "wood-doors", "glass-doors" , "patterned"],
-  // },
-];
+// Объект: каждая категория — это свой массив товаров
+export const categorizedProducts: Record<ProductCategory, Product[]> = {
+  "wood-door": [
+    {
+      id: "door-1",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
+      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar.jpg",
+      price: 6868,
+      oldPrice: 15000,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "wood-door",
+    },
+    {
+      id: "door-122",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
+      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar.jpg",
+      price: 6868,
+      oldPrice: 15000,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "wood-door",
+    },
+    {
+      id: "door-221",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
+      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar.jpg",
+      price: 6868,
+      oldPrice: 15000,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "wood-door",
+    },
+    {
+      id: "door-21",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
+      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar.jpg",
+      price: 6868,
+      oldPrice: 15000,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "wood-door",
+    },
+    {
+      id: "door-231",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
+      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar.jpg",
+      price: 6868,
+      oldPrice: 15000,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "wood-door",
+    },
+  ],
+
+  "glass-door": [
+    {
+      id: "glass-1",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
+      series: "BRONZE",
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar2.jpg",
+      price: 11000,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "glass-door",
+    },
+    {
+      id: "glass-31",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
+      series: "BRONZE",
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar.jpg",
+      price: 11000,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "glass-door",
+    },
+    {
+      id: "glass-31654",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
+      series: "BRONZE",
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar.jpg",
+      price: 11000,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "glass-door",
+    },
+    {
+      id: "glass-311123",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
+      series: "BRONZE",
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar.jpg",
+      price: 11000,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "glass-door",
+    },
+    {
+      id: "glass-332321",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
+      series: "BRONZE",
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar.jpg",
+      price: 11000,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "glass-door",
+    },
+    {
+      id: "glass-3133",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
+      series: "BRONZE",
+      sizeLabel: "1850/700",
+      image: "/products/test-tovar.jpg",
+      price: 11000,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "glass-door",
+    },
+  ],
+
+  "window": [
+    {
+      id: "window-1",
+      title: "ФОРТОЧКА ДЛЯ БАНИ СО СТЕКЛОПАКЕТОМ",
+      series: 'СЕРИЯ "ОСЕНЬ"',
+      sizeLabel: "600/600",
+      image: "/products/test-tovar2.jpg",
+      price: 4349,
+      oldPrice: 9200,
+      isHit: true,
+      isNew: false,
+      hasDiscount: true,
+      category: "window",
+    },
+  ],
+
+  "lounger": [
+    {
+      id: "lounger-1",
+      title: "ШЕЗЛОНГ СКЛАДНОЙ ТКАНЕВЫЙ",
+      series: 'СЕРИЯ "Дачный отдых"',
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar2.jpg",
+      price: 2689,
+      oldPrice: undefined,
+      isHit: true,
+      isNew: true,
+      hasDiscount: false,
+      category: "lounger",
+    },
+  ],
+
+  "headrest": [
+    {
+      id: "headrest-1",
+      title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
+      series: "ЛИПА",
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar3.png",
+      price: 1322,
+      oldPrice: undefined,
+      isHit: true,
+      isNew: false,
+      hasDiscount: false,
+      category: "headrest",
+    },
+    {
+      id: "headrest-12",
+      title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
+      series: "ЛИПА",
+      sizeLabel: "1850/750",
+      image: "/products/test-tovar4.png",
+      price: 1322,
+      oldPrice: undefined,
+      isHit: true,
+      isNew: false,
+      hasDiscount: false,
+      category: "headrest",
+    },
+  ],
+
+  "other": [
+    // сюда потом добавишь аксессуары и прочее
+  ],
+};
+
+// Плоский список всех товаров — удобно для "Хиты" / "Новинки"
+export const allProducts: Product[] = Object.values(categorizedProducts).flat();

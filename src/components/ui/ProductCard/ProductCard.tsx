@@ -36,10 +36,11 @@ export default function ProductCard({
   return (
     <article className={cardClassName}>
       <div className={styles.ImageWrapper}>
-
         {variant === "default" && (isHit || hasDiscount) && (
           <div className={styles.Badges}>
-            {isHit && <div className={`${styles.Badge} ${styles.BadgeHit}`}>ХИТ</div>}
+            {isHit && (
+              <div className={`${styles.Badge} ${styles.BadgeHit}`}>ХИТ</div>
+            )}
             {hasDiscount && (
               <div className={`${styles.Badge} ${styles.BadgeDiscount}`}>%</div>
             )}
@@ -55,7 +56,11 @@ export default function ProductCard({
         />
       </div>
 
-      {sizeLabel && <div className={styles.SizePill}><span>{sizeLabel}</span></div>}
+      {sizeLabel && (
+        <div className={styles.SizePill}>
+          <span>{sizeLabel}</span>
+        </div>
+      )}
 
       <h3 className={styles.Title}>{title}</h3>
       <p className={styles.Series}>{series}</p>
@@ -67,4 +72,3 @@ export default function ProductCard({
     </article>
   );
 }
-

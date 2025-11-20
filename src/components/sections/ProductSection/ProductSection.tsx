@@ -1,6 +1,6 @@
 import styles from "./ProductSection.module.scss";
 import ProductCard from "../../ui/ProductCard/ProductCard";
-import { products } from "../../../data/products";
+import { allProducts } from "../../../data/products";
 
 interface ProductSectionProps {
   title: string;
@@ -10,8 +10,8 @@ interface ProductSectionProps {
 export default function ProductSection({ title, mode }: ProductSectionProps) {
   const filtered =
     mode === "hits"
-      ? products.filter((p) => p.isHit)
-      : products.filter((p) => p.isNew);
+      ? allProducts.filter((p) => p.isHit)
+      : allProducts.filter((p) => p.isNew);
 
   return (
     <section className={styles.Section}>
