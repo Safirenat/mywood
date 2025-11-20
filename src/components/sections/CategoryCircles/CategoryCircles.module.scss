@@ -9,7 +9,7 @@
 .Inner {
   max-width: $apx-1200;
   margin: 0 auto;
-  padding: 0 $apx-20; 
+  padding: 0 $apx-20;
 
   display: flex;
   justify-content: space-between;
@@ -27,6 +27,17 @@
   min-width: $apx-110;
   cursor: pointer;
 
+  // ховер по всему элементу
+  &:hover .Circle {
+    transform: scale(1.08);
+    box-shadow: 0 0 $apx-12 rgba(0, 0, 0, 0.08);
+    border-color: #f28a1a;
+  }
+
+  &:hover .Label {
+    color: #f28a1a;
+  }
+
   @media (max-width: 900px) {
     min-width: $apx-100;
   }
@@ -35,7 +46,7 @@
 .Circle {
   width: $apx-110;
   height: $apx-110;
-  padding:$apx-5;
+  padding: $apx-5;
   border-radius: 50%;
   border: $apx-1 solid #e0e0e0;
   display: flex;
@@ -43,10 +54,18 @@
   align-items: center;
   margin: 0 auto $apx-8;
   background: #fff;
+
+  // плавная анимация
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .Label {
   font-size: $apx-14;
   color: #3a3a3a;
   line-height: 1.3;
+  transition: color 0.2s ease;
 }
