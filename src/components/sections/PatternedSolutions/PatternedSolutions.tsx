@@ -10,9 +10,9 @@ export default function PatternedSolutions() {
   const [randomItems, setRandomItems] = useState<Product[]>([]);
 
   useEffect(() => {
-    // Берём все деревянные двери + форточки
+    // Берём все комбинированные двери + форточки
     const source: Product[] = [
-      ...(categorizedProducts["wood-door"] ?? []),
+      ...(categorizedProducts["combo-door"] ?? []),
       ...(categorizedProducts["window"] ?? []),
     ];
 

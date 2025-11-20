@@ -3,95 +3,59 @@
 export type ProductCategory =
   | "wood-door"
   | "glass-door"
+  | "combo-door" // 👈 НОВОЕ
   | "window"
   | "lounger"
   | "headrest"
   | "other";
 
 export interface Product {
-  id: string;            // ID товара
-  title: string;         // Название, напр. "ДВЕРЬ ДЛЯ БАНИ ..."
-  series: string;        // Серия, напр. 'СЕРИЯ "ЛЕТЯТ УТКИ"'
-  sizes?: string[];      // МАССИВ размеров: ["600/600", "500/500"]
-  image: string;         // Путь к картинке
-  price: number;         // Актуальная цена
-  oldPrice?: number;     // Старая цена (если есть скидка)
-  isHit: boolean;        // Хит продаж
-  isNew: boolean;        // Новинка
-  hasDiscount: boolean;  // Есть скидка (%)
+  id: string;          // ID товара
+  title: string;       // Название
+  series: string;      // Серия
+  sizeLabel?: string;  // Старое одиночное поле (fallback)
+  sizes?: string[];    // Несколько размеров
+  image: string;       // Путь к картинке
+  price: number;       // Актуальная цена
+  oldPrice?: number;   // Старая цена (если есть скидка)
+  isHit: boolean;      // Хит продаж
+  isNew: boolean;      // Новинка
+  hasDiscount: boolean;// Есть скидка (%)
   category: ProductCategory;
 }
 
-// Объект: каждая категория — это свой массив товаров
+// Объект: каждая категория — свой массив товаров
 export const categorizedProducts: Record<ProductCategory, Product[]> = {
+  // ===== ДЕРЕВЯННЫЕ ДВЕРИ =====
   "wood-door": [
     {
-      id: "door-1",
-      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
-      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizes: ["1850/750"],
+      id: "wood-1",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ БЕЗ ВСТАВКИ",
+      series: 'СЕРИЯ "КЛАССИКА"',
+      sizes: ["1850/700", "1850/800"],
       image: "/products/test-tovar.jpg",
-      price: 6868,
-      oldPrice: 15000,
+      price: 5990,
+      oldPrice: 9000,
       isHit: true,
       isNew: true,
       hasDiscount: true,
       category: "wood-door",
     },
     {
-      id: "door-122",
-      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
-      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizes: ["1850/750"],
-      image: "/products/test-tovar.jpg",
-      price: 6868,
-      oldPrice: 15000,
-      isHit: true,
-      isNew: true,
-      hasDiscount: true,
-      category: "wood-door",
-    },
-    {
-      id: "door-221",
-      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
-      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizes: ["1850/750"],
-      image: "/products/test-tovar.jpg",
-      price: 6868,
-      oldPrice: 15000,
-      isHit: true,
-      isNew: true,
-      hasDiscount: true,
-      category: "wood-door",
-    },
-    {
-      id: "door-21",
-      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
-      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizes: ["1850/750"],
-      image: "/products/test-tovar.jpg",
-      price: 6868,
-      oldPrice: 15000,
-      isHit: true,
-      isNew: true,
-      hasDiscount: true,
-      category: "wood-door",
-    },
-    {
-      id: "door-231",
-      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
-      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizes: ["1850/750"],
-      image: "/products/test-tovar.jpg",
-      price: 6868,
-      oldPrice: 15000,
-      isHit: true,
-      isNew: true,
-      hasDiscount: true,
+      id: "wood-2",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ С КЛИНОМ",
+      series: "ЛИПА",
+      sizes: ["1850/700"],
+      image: "/products/test-tovar2.jpg",
+      price: 5490,
+      isHit: false,
+      isNew: false,
+      hasDiscount: false,
       category: "wood-door",
     },
   ],
 
+  // ===== СТЕКЛЯННЫЕ ДВЕРИ =====
   "glass-door": [
     {
       id: "glass-1",
@@ -106,73 +70,66 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       category: "glass-door",
     },
     {
-      id: "glass-31",
-      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
-      series: "BRONZE",
-      sizes: ["1850/700"],
+      id: "glass-2",
+      title: "ДВЕРЬ СТЕКЛЯННАЯ ПРОЗРАЧНАЯ",
+      series: "CLEAR",
+      sizes: ["1850/700", "1850/800"],
       image: "/products/test-tovar.jpg",
-      price: 11000,
-      isHit: false,
-      isNew: true,
-      hasDiscount: false,
-      category: "glass-door",
-    },
-    {
-      id: "glass-31654",
-      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
-      series: "BRONZE",
-      sizes: ["1850/700"],
-      image: "/products/test-tovar.jpg",
-      price: 11000,
-      isHit: false,
-      isNew: true,
-      hasDiscount: false,
-      category: "glass-door",
-    },
-    {
-      id: "glass-311123",
-      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
-      series: "BRONZE",
-      sizes: ["1850/700"],
-      image: "/products/test-tovar.jpg",
-      price: 11000,
-      isHit: false,
-      isNew: true,
-      hasDiscount: false,
-      category: "glass-door",
-    },
-    {
-      id: "glass-332321",
-      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
-      series: "BRONZE",
-      sizes: ["1850/700"],
-      image: "/products/test-tovar.jpg",
-      price: 11000,
-      isHit: false,
-      isNew: true,
-      hasDiscount: false,
-      category: "glass-door",
-    },
-    {
-      id: "glass-3133",
-      title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
-      series: "BRONZE",
-      sizes: ["1850/700"],
-      image: "/products/test-tovar.jpg",
-      price: 11000,
-      isHit: false,
-      isNew: true,
+      price: 11500,
+      isHit: true,
+      isNew: false,
       hasDiscount: false,
       category: "glass-door",
     },
   ],
 
+  // ===== КОМБИНИРОВАННЫЕ ДВЕРИ (ДЕРЕВО + СЮЖЕТНОЕ СТЕКЛО) =====
+  "combo-door": [
+    {
+      id: "combo-1",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ \"ЛЕТЯТ УТКИ\"",
+      series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
+      sizes: ["1850/750"],
+      image: "/products/test-tovar.jpg",
+      price: 6868,
+      oldPrice: 15000,
+      isHit: true,
+      isNew: true,
+      hasDiscount: true,
+      category: "combo-door",
+    },
+    {
+      id: "combo-2",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ \"ЛЕТНИЙ ЛУГ\"",
+      series: 'СЕРИЯ "ЛЕТНИЙ ЛУГ"',
+      sizes: ["1850/750"],
+      image: "/products/test-tovar2.jpg",
+      price: 6990,
+      isHit: true,
+      isNew: false,
+      hasDiscount: false,
+      category: "combo-door",
+    },
+    {
+      id: "combo-3",
+      title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ \"ГОРНОЕ ОЗЕРО\"",
+      series: 'СЕРИЯ "ГОРНОЕ ОЗЕРО"',
+      sizes: ["1850/750"],
+      image: "/products/test-tovar.jpg",
+      price: 7190,
+      isHit: false,
+      isNew: true,
+      hasDiscount: false,
+      category: "combo-door",
+    },
+  ],
+
+  // ===== ФОРТОЧКИ =====
   "window": [
     {
       id: "window-1",
       title: "ФОРТОЧКА ДЛЯ БАНИ СО СТЕКЛОПАКЕТОМ",
       series: 'СЕРИЯ "ОСЕНЬ"',
-      // вот тут как раз несколько размеров
       sizes: ["600/600", "500/500", "400/400"],
       image: "/products/test-tovar2.jpg",
       price: 4349,
@@ -184,11 +141,12 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
     },
   ],
 
+  // ===== ШЕЗЛОНГИ =====
   "lounger": [
     {
       id: "lounger-1",
       title: "ШЕЗЛОНГ СКЛАДНОЙ ТКАНЕВЫЙ",
-      series: 'СЕРИЯ "Дачный отдых"',
+      series: 'СЕРИЯ "ДАЧНЫЙ ОТДЫХ"',
       sizes: ["1850/750"],
       image: "/products/test-tovar2.jpg",
       price: 2689,
@@ -200,6 +158,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
     },
   ],
 
+  // ===== ПОДГОЛОВНИКИ =====
   "headrest": [
     {
       id: "headrest-1",
@@ -215,7 +174,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       category: "headrest",
     },
     {
-      id: "headrest-12",
+      id: "headrest-2",
       title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
       series: "ЛИПА",
       sizes: ["1850/750"],
@@ -229,8 +188,9 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
     },
   ],
 
+  // ===== ПРОЧЕЕ =====
   "other": [
-    // сюда потом добавишь аксессуары и прочее
+    // сюда потом добавим аксессуары и т.п.
   ],
 };
 
