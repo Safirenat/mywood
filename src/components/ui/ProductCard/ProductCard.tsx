@@ -17,7 +17,7 @@ export default function ProductCard({
     image,
     title,
     series,
-    sizeLabel,
+    sizes,
     price,
     oldPrice,
     isHit,
@@ -56,9 +56,10 @@ export default function ProductCard({
         />
       </div>
 
-      {sizeLabel && (
+      {sizes && sizes.length > 0 && (
         <div className={styles.SizePill}>
-          <span>{sizeLabel}</span>
+          {/* "600/600 / 500/500 / 400/400" */}
+          <span>{sizes.join(" / ")}</span>
         </div>
       )}
 

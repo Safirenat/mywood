@@ -3,23 +3,22 @@
 export type ProductCategory =
   | "wood-door"
   | "glass-door"
-  | "combo-door"   // 🔸 новая категория
   | "window"
   | "lounger"
   | "headrest"
   | "other";
 
 export interface Product {
-  id: string;           // ID товара
-  title: string;        // Название, напр. "ДВЕРЬ ДЛЯ БАНИ ..."
-  series: string;       // Серия, напр. 'СЕРИЯ "ЛЕТЯТ УТКИ"'
-  sizeLabel?: string;   // Размер, напр. "1850/750"
-  image: string;        // Путь к картинке
-  price: number;        // Актуальная цена
-  oldPrice?: number;    // Старая цена (если есть скидка)
-  isHit: boolean;       // Хит продаж
-  isNew: boolean;       // Новинка
-  hasDiscount: boolean; // Есть скидка (%)
+  id: string;            // ID товара
+  title: string;         // Название, напр. "ДВЕРЬ ДЛЯ БАНИ ..."
+  series: string;        // Серия, напр. 'СЕРИЯ "ЛЕТЯТ УТКИ"'
+  sizes?: string[];      // МАССИВ размеров: ["600/600", "500/500"]
+  image: string;         // Путь к картинке
+  price: number;         // Актуальная цена
+  oldPrice?: number;     // Старая цена (если есть скидка)
+  isHit: boolean;        // Хит продаж
+  isNew: boolean;        // Новинка
+  hasDiscount: boolean;  // Есть скидка (%)
   category: ProductCategory;
 }
 
@@ -30,7 +29,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "door-1",
       title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
       series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar.jpg",
       price: 6868,
       oldPrice: 15000,
@@ -43,7 +42,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "door-122",
       title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
       series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar.jpg",
       price: 6868,
       oldPrice: 15000,
@@ -56,7 +55,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "door-221",
       title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
       series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar.jpg",
       price: 6868,
       oldPrice: 15000,
@@ -69,7 +68,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "door-21",
       title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
       series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar.jpg",
       price: 6868,
       oldPrice: 15000,
@@ -82,7 +81,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "door-231",
       title: "ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ",
       series: 'СЕРИЯ "ЛЕТЯТ УТКИ"',
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar.jpg",
       price: 6868,
       oldPrice: 15000,
@@ -98,7 +97,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "glass-1",
       title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
       series: "BRONZE",
-      sizeLabel: "1850/700",
+      sizes: ["1850/700"],
       image: "/products/test-tovar2.jpg",
       price: 11000,
       isHit: false,
@@ -110,7 +109,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "glass-31",
       title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
       series: "BRONZE",
-      sizeLabel: "1850/700",
+      sizes: ["1850/700"],
       image: "/products/test-tovar.jpg",
       price: 11000,
       isHit: false,
@@ -122,7 +121,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "glass-31654",
       title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
       series: "BRONZE",
-      sizeLabel: "1850/700",
+      sizes: ["1850/700"],
       image: "/products/test-tovar.jpg",
       price: 11000,
       isHit: false,
@@ -134,7 +133,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "glass-311123",
       title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
       series: "BRONZE",
-      sizeLabel: "1850/700",
+      sizes: ["1850/700"],
       image: "/products/test-tovar.jpg",
       price: 11000,
       isHit: false,
@@ -146,7 +145,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "glass-332321",
       title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
       series: "BRONZE",
-      sizeLabel: "1850/700",
+      sizes: ["1850/700"],
       image: "/products/test-tovar.jpg",
       price: 11000,
       isHit: false,
@@ -158,7 +157,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "glass-3133",
       title: "ДВЕРЬ СТЕКЛЯННАЯ МАТОВАЯ",
       series: "BRONZE",
-      sizeLabel: "1850/700",
+      sizes: ["1850/700"],
       image: "/products/test-tovar.jpg",
       price: 11000,
       isHit: false,
@@ -168,57 +167,13 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
     },
   ],
 
-  "combo-door": [
-    {
-      id: "combo-1",
-      title:
-        'ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ "Летний луг"',
-      series: 'СЕРИЯ "ЛЕТНИЙ ЛУГ"',
-      sizeLabel: "1850/750",
-      image: "/products/test-tovar2.jpg",
-      price: 9999,
-      oldPrice: 13500,
-      isHit: true,
-      isNew: true,
-      hasDiscount: true,
-      category: "combo-door",
-    },
-    {
-      id: "combo-2",
-      title:
-        'ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ "Горное озеро"',
-      series: 'СЕРИЯ "ГОРНОЕ ОЗЕРО"',
-      sizeLabel: "1850/750",
-      image: "/products/test-tovar.jpg",
-      price: 10490,
-      oldPrice: 13900,
-      isHit: false,
-      isNew: true,
-      hasDiscount: true,
-      category: "combo-door",
-    },
-    {
-      id: "combo-3",
-      title:
-        'ДВЕРЬ ДЛЯ БАНИ ДЕРЕВЯННАЯ СО СТЕКЛЯННОЙ ВСТАВКОЙ "Парус"',
-      series: 'СЕРИЯ "ПАРУС"',
-      sizeLabel: "1850/700",
-      image: "/products/test-tovar2.jpg",
-      price: 9490,
-      oldPrice: 0,
-      isHit: true,
-      isNew: false,
-      hasDiscount: false,
-      category: "combo-door",
-    },
-  ],
-
   "window": [
     {
       id: "window-1",
       title: "ФОРТОЧКА ДЛЯ БАНИ СО СТЕКЛОПАКЕТОМ",
       series: 'СЕРИЯ "ОСЕНЬ"',
-      sizeLabel: "600/600",
+      // вот тут как раз несколько размеров
+      sizes: ["600/600", "500/500", "400/400"],
       image: "/products/test-tovar2.jpg",
       price: 4349,
       oldPrice: 9200,
@@ -234,7 +189,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "lounger-1",
       title: "ШЕЗЛОНГ СКЛАДНОЙ ТКАНЕВЫЙ",
       series: 'СЕРИЯ "Дачный отдых"',
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar2.jpg",
       price: 2689,
       oldPrice: undefined,
@@ -250,7 +205,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "headrest-1",
       title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
       series: "ЛИПА",
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar3.png",
       price: 1322,
       oldPrice: undefined,
@@ -263,7 +218,7 @@ export const categorizedProducts: Record<ProductCategory, Product[]> = {
       id: "headrest-12",
       title: "ПОДГОЛОВНИК ДЕРЕВЯННЫЙ СЪЁМНЫЙ АНАТОМИЧЕСКИЙ",
       series: "ЛИПА",
-      sizeLabel: "1850/750",
+      sizes: ["1850/750"],
       image: "/products/test-tovar4.png",
       price: 1322,
       oldPrice: undefined,
