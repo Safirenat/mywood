@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll; // скролл всегда на месте, ширина страницы не прыгает
+}
+
+
 html,
 body {
   width: 100%;

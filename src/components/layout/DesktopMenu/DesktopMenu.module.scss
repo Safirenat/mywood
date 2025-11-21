@@ -1,0 +1,125 @@
+@use "../../../styles/adaptive-px.scss" as *;
+
+// высота хедера (как в Header.module.scss)
+$header-height: $apx-64;
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: $header-height; // не перекрываем хедер и бургер
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 35;
+}
+
+.backdropVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu {
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  width: $apx-360;
+  height: calc(49vh - #{$header-height});
+  background: #ffffff;
+  box-shadow: 0 0 $apx-20 rgba(0, 0, 0, 0.08);
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  z-index: 40; // выше хедера и бордера
+
+  display: flex;
+  flex-direction: column; // верхняя часть + нижний help-блок
+}
+
+.menuOpen {
+  transform: translateX(0);
+  width: $apx-478;
+
+}
+
+.menuInner {
+  flex: 1; // занимает всё доступное пространство над help-блоком
+  display: flex;
+  flex-direction: column;
+  padding: $apx-24 $apx-32;
+}
+
+/* Город */
+
+.cityRow {
+  display: inline-flex;
+  align-items: center;
+  gap: $apx-8;
+  margin-bottom: $apx-32;
+  font-size: $apx-14;
+  color: #6b4b22;
+}
+
+.cityArrow {
+  font-size: $apx-12;
+}
+
+.cityName {
+  font-weight: 500;
+}
+
+/* Навигация */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: $apx-24;
+  margin-bottom: auto;
+}
+
+.navItem {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-size: $apx-26;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #4a2f11;
+  text-align: left;
+
+  &:hover {
+    color: #8a5b24;
+  }
+}
+
+/* Отдельный нижний блок помощи / WhatsApp */
+
+.helpBar {
+  background: #f4f0f0; // отдельный фон только здесь
+  border-top: 1px solid #f0f0f0;
+  padding: $apx-12 $apx-32 $apx-16;
+}
+
+.helpTitle {
+  font-size: $apx-12;
+  color: #8a8a8a;
+  margin-bottom: $apx-4;
+}
+
+.helpLink {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  font-size: $apx-12;
+  color: #4a2f11;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
