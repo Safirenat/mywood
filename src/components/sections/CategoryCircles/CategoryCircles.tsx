@@ -56,7 +56,6 @@ export default function CategoryCircles() {
                 alt={cat.title}
                 width={80}
                 height={80}
-                quality={90}
               />
             </div>
             <p className={styles.Label}>{cat.title}</p>
